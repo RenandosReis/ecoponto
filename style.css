@@ -111,10 +111,33 @@ header .menu-links a:hover {
 /* Área reservada para o Google Maps */
 #mapa {
     flex: 1;
-    background-color: #2b2b2b; /* Fundo temporário enquanto o mapa não carrega */
+    min-height: 500px;
+    background-color: #2b2b2b;
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.2);
+}
 
+.lista-ecopontos li {
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.lista-ecopontos li:hover {
+    background: rgba(162, 210, 169, 0.2);
+    transform: translateX(4px);
+}
+
+.mapa-vazio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 500px;
+    text-align: center;
+    padding: 30px;
+    color: #dfece0;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.4);
 }
 /* ESTRUTURA DO BLOG */
 .container-blog {

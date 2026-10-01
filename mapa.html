@@ -8,44 +8,45 @@
 </head>
 <body>
 
-    <<header>
-    <a href="index.html" class="logo">
-        <img src="ecomovimento.png" alt="EcoMovimento">
-    </a>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="ecoponto.png" alt="EcoMovimento">
+        </a>
 
-    <nav class="menu-links">
-        <a href="index.html">EcoMovimento</a>
-        <a href="mapa.html">MAPA</a>
-        <a href="blog.html">BLOG</a>
-        <a href="contatos.html">CONTATOS</a>
-        <a href="denuncia.html">DISQUE DENUNCIA</a>
-        <a href="contatos.html">FAQ</a>
-    </nav>
-</header>
+        <nav class="menu-links">
+            <a href="index.html">ecoponto</a>
+            <a href="mapa.html">MAPA</a>
+            <a href="blog.html">BLOG</a>
+            <a href="contatos.html">CONTATOS</a>
+            <a href="denuncia.html">DISQUE DENUNCIA</a>
+            <a href="fag.html">FAQ</a>
+        </nav>
+    </header>
 
     <main class="container-mapa">
         <aside class="lista-ecopontos">
             <h2>Ecopontos em Mauá</h2>
             <p>Selecione um ponto no mapa ou na lista abaixo para descartar seus resíduos corretamente:</p>
-            
+
             <ul>
-                <li>
+                <li data-index="0">
                     <strong>Ecoponto Parque das Américas</strong><br>
                     R. Geovani Batista Lorenzetto, 85
                 </li>
-                <li>
+                <li data-index="1">
                     <strong>Ecoponto Jardim Cerqueira Leite</strong><br>
                     R. Washingthon Luiz, 2200
                 </li>
-                <li>
+                <li data-index="2">
                     <strong>PEV Jardim Zaíra</strong><br>
                     Av. Washington Luiz, s/n
                 </li>
             </ul>
         </aside>
 
-        <div id="mapa"></div>
+        <div id="mapa" aria-label="Mapa com ecopontos"></div>
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
