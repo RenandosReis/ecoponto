@@ -13,7 +13,7 @@ const ecopontos = [
   }
 ];
 
-const GOOGLE_MAPS_API_KEY = 'SUA_CHAVE_DO_GOOGLE_MAPS';
+const GOOGLE_MAPS_API_KEY = 'AIzaSyBIFO8AudnvgO9NYIijovjXhzZDxpx8zqk';
 
 function exibirMensagemApi() {
   const mapaEl = document.getElementById('mapa');
@@ -22,8 +22,8 @@ function exibirMensagemApi() {
 
   mapaEl.innerHTML = `
     <div class="mapa-vazio">
-      Adicione sua chave da Google Maps em <strong>script.js</strong> para ativar o mapa.<br>
-      Depois, substitua <strong>SUA_CHAVE_DO_GOOGLE_MAPS</strong> pela sua API key.
+      Configure sua chave da Google Maps em <strong>script.js</strong> para ativar o mapa.<br>
+      Substitua <strong>SUA_CHAVE_DO_GOOGLE_MAPS</strong> pela sua API key.
     </div>
   `;
 }
@@ -33,7 +33,7 @@ function initMap() {
 
   if (!mapaEl) return;
 
-  if (GOOGLE_MAPS_API_KEY === 'SUA_CHAVE_DO_GOOGLE_MAPS') {
+  if (!GOOGLE_MAPS_API_KEY || GOOGLE_MAPS_API_KEY === 'SUA_CHAVE_DO_GOOGLE_MAPS') {
     exibirMensagemApi();
     return;
   }
