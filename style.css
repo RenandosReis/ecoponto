@@ -263,3 +263,158 @@ header .menu-links a:hover {
     margin-bottom: 5px;
     font-size: 16px;
 }
+
+/* CARROSSEL DE PROGRAMAS DE RECICLAGEM */
+.carrossel-reciclagem {
+    max-width: 1000px;
+    margin: 55px auto;
+    padding: 0 24px;
+}
+
+.carrossel-intro {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.carrossel-etiqueta,
+.programa-categoria {
+    color: #a2d2a9;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.carrossel-intro h1 {
+    margin: 8px 0;
+    font-size: clamp(28px, 5vw, 42px);
+}
+
+.carrossel-intro > p:last-child {
+    line-height: 1.6;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.carrossel-janela {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-programa {
+    min-height: 300px;
+    padding: 32px;
+    border: 1px solid rgba(162, 210, 169, 0.4);
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.78);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.card-programa[hidden] {
+    display: none;
+}
+
+.card-programa h2 {
+    margin: 12px 0;
+    font-size: clamp(24px, 4vw, 34px);
+}
+
+.card-programa p {
+    max-width: 680px;
+    line-height: 1.6;
+}
+
+.card-programa .programa-destaque {
+    color: #d7ead9;
+}
+
+.card-programa .botao {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    background: #315d3b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-programa .botao:hover,
+.card-programa .botao:focus-visible {
+    background: #42774f;
+}
+
+.carrossel-controle {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.carrossel-controle:hover,
+.carrossel-controle:focus-visible {
+    background: #315d3b;
+}
+
+.carrossel-paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 12px;
+}
+
+.carrossel-paginacao button {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.carrossel-paginacao button[aria-current="true"] {
+    background: #a2d2a9;
+    transform: scale(1.2);
+}
+
+.carrossel-aviso {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #e4e9e4;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .carrossel-reciclagem {
+        margin: 32px auto;
+        padding: 0 14px;
+    }
+
+    .carrossel {
+        gap: 8px;
+    }
+
+    .card-programa {
+        min-height: 360px;
+        padding: 22px;
+    }
+
+    .carrossel-controle {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+    }
+}

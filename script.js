@@ -109,3 +109,71 @@ function carregarGoogleMaps() {
 }
 
 window.addEventListener('DOMContentLoaded', carregarGoogleMaps);
+
+function iniciarCarrossel() {
+  const carrossel = document.querySelector('.carrossel');
+  const cards = Array.from(document.querySelectorAll('.card-programa'));
+  const botoesPagina = Array.from(document.querySelectorAll('.carrossel-paginacao button'));
+
+  if (!carrossel || cards.length === 0 || botoesPagina.length !== cards.length) return;
+
+  let indiceAtual = 0;
+  let temporizador;
+  const prefereMovimentoReduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function mostrarCard(indice) {
+    indiceAtual = (indice + cards.length) % cards.length;
+    cards.forEach((card, index) => {
+      const ativo = index === indiceAtual;
+      card.hidden = !ativo;
+      card.classList.toggle('ativo', ativo);
+      card.setAttribute('aria-hidden', String(!ativo));
+    });
+    botoesPagina.forEach((botao, index) => {
+      if (index === indiceAtual) {
+        botao.setAttribute('aria-current', 'true');
+      } else {
+        botao.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function iniciarRotacao() {
+    if (prefereMovimentoReduzido || cards.length < 2 || temporizador) return;
+    temporizador = window.setInterval(() => mostrarCard(indiceAtual + 1), 5000);
+  }
+
+  function pausarRotacao() {
+    window.clearInterval(temporizador);
+    temporizador = undefined;
+  }
+
+  carrossel.querySelector('.anterior').addEventListener('click', () => {
+    mostrarCard(indiceAtual - 1);
+  });
+  carrossel.querySelector('.proximo').addEventListener('click', () => {
+    mostrarCard(indiceAtual + 1);
+  });
+  botoesPagina.forEach((botao, index) => {
+    botao.addEventListener('click', () => mostrarCard(index));
+  });
+
+  carrossel.addEventListener('mouseenter', pausarRotacao);
+  carrossel.addEventListener('mouseleave', iniciarRotacao);
+  carrossel.addEventListener('focusin', pausarRotacao);
+  carrossel.addEventListener('focusout', (evento) => {
+    if (!carrossel.contains(evento.relatedTarget)) iniciarRotacao();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      pausarRotacao();
+    } else {
+      iniciarRotacao();
+    }
+  });
+
+  mostrarCard(indiceAtual);
+  iniciarRotacao();
+}
+
+window.addEventListener('DOMContentLoaded', iniciarCarrossel);

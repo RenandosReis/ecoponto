@@ -23,11 +23,59 @@
 </header>
 
 <main>
-    <div class="card-principal"> 
-        <h1>Recicle e Ganhe com O Boticário!</h1>
-        <h3>Você sabia que pode transformar suas embalagens usadas em descontos incríveis?</h3>
-        <a href="https://www.boticario.com.br/" class="botao">Saiba mais</a>
-    </div>
+    <section class="carrossel-reciclagem" aria-label="Programas de reciclagem com benefícios">
+        <div class="carrossel-intro">
+            <p class="carrossel-etiqueta">LOGÍSTICA REVERSA</p>
+            <h1>Recicle embalagens e descubra benefícios</h1>
+            <p>Conheça programas para dar um destino correto às embalagens de cosméticos, limpeza, bebidas e muito mais.</p>
+        </div>
+
+        <div class="carrossel" aria-roledescription="carrossel">
+            <button class="carrossel-controle anterior" type="button" aria-label="Ver programa anterior">&#10094;</button>
+            <div class="carrossel-janela">
+                <article class="card-programa ativo" aria-label="1 de 4">
+                    <span class="programa-categoria">Limpeza, bebidas e alimentos</span>
+                    <h2>Retorna Machine — Triciclo</h2>
+                    <p>Entregue embalagens aceitas nas máquinas e acumule Tricoins para trocar por benefícios disponíveis no programa, que podem variar por região.</p>
+                    <p class="programa-destaque">Em áreas atendidas por distribuidoras parceiras da Neoenergia, o site informa que 150 Tricoins equivalem a R$ 1 de desconto na conta de luz.</p>
+                    <a href="https://retornamachine.eco.br/" class="botao" target="_blank" rel="noopener noreferrer">Ver programa</a>
+                </article>
+
+                <article class="card-programa" aria-label="2 de 4" hidden>
+                    <span class="programa-categoria">Cosméticos</span>
+                    <h2>Boti Recicla — O Boticário</h2>
+                    <p>Consulte as lojas participantes e as regras para entregar embalagens de cosméticos vazias para reciclagem.</p>
+                    <p class="programa-destaque">Verifique diretamente com a loja se há benefício ou campanha ativa na sua região.</p>
+                    <a href="https://www.boticario.com.br/boti-recicla/" class="botao" target="_blank" rel="noopener noreferrer">Ver Boti Recicla</a>
+                </article>
+
+                <article class="card-programa" aria-label="3 de 4" hidden>
+                    <span class="programa-categoria">Cosméticos e higiene</span>
+                    <h2>Natura — encontre uma loja</h2>
+                    <p>Use o localizador para encontrar uma loja Natura e consultar se ela participa de ações de recebimento de embalagens.</p>
+                    <p class="programa-destaque">As condições e eventuais benefícios devem ser confirmados com a unidade participante.</p>
+                    <a href="https://www.natura.com.br/encontre-uma-loja" class="botao" target="_blank" rel="noopener noreferrer">Encontrar uma loja</a>
+                </article>
+
+                <article class="card-programa" aria-label="4 de 4" hidden>
+                    <span class="programa-categoria">Garrafas, latas e longa vida</span>
+                    <h2>Máquinas de reciclagem — Carrefour</h2>
+                    <p>O Grupo Carrefour Brasil já divulgou máquinas de benefícios para reciclagem de embalagens.</p>
+                    <p class="programa-destaque">Consulte a notícia e confirme com a loja se a máquina e a campanha estão disponíveis.</p>
+                    <a href="https://www.grupocarrefourbrasil.com.br/news/maquinas-beneficios-reciclagem" class="botao" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+                </article>
+            </div>
+            <button class="carrossel-controle proximo" type="button" aria-label="Ver próximo programa">&#10095;</button>
+        </div>
+
+        <div class="carrossel-paginacao" aria-label="Escolher programa">
+            <button type="button" aria-label="Mostrar programa 1" aria-current="true"></button>
+            <button type="button" aria-label="Mostrar programa 2"></button>
+            <button type="button" aria-label="Mostrar programa 3"></button>
+            <button type="button" aria-label="Mostrar programa 4"></button>
+        </div>
+        <p class="carrossel-aviso">Materiais aceitos, lojas participantes e benefícios podem mudar. Confira as regras oficiais antes de levar suas embalagens.</p>
+    </section>
 </main>
 
 </body>~
