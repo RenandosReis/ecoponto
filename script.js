@@ -14,6 +14,10 @@ const ecopontos = [
 ];
 
 const GOOGLE_MAPS_API_KEY = 'AIzaSyBIFO8AudnvgO9NYIijovjXhzZDxpx8zqk';
+let mapaAtivo;
+let geocodificadorMapa;
+let limitesEcopontos;
+let marcadorBusca;
 
 function exibirMensagemApi() {
   const mapaEl = document.getElementById('mapa');
@@ -28,6 +32,94 @@ function exibirMensagemApi() {
   `;
 }
 
+function buscarEnderecoNoMapa(event) {
+  event.preventDefault();
+
+  const campoBusca = document.getElementById('busca-endereco');
+  const statusBusca = document.getElementById('status-busca-mapa');
+  const consulta = campoBusca.value.trim();
+  const somenteNumeros = consulta.replace(/\D/g, '');
+  const pareceCep = /^[\d\s.-]+$/.test(consulta);
+
+  if (!consulta) {
+    statusBusca.textContent = 'Digite um CEP ou o nome de uma rua.';
+    campoBusca.focus();
+    return;
+  }
+
+  if (pareceCep && somenteNumeros.length !== 8) {
+    statusBusca.textContent = 'O CEP deve ter 8 números. Você também pode buscar pelo nome da rua.';
+    campoBusca.focus();
+    return;
+  }
+
+  if (!geocodificadorMapa || !mapaAtivo) {
+    statusBusca.textContent = 'A busca no mapa está indisponível no momento. Recarregue a página e tente novamente.';
+    return;
+  }
+
+  statusBusca.textContent = 'Buscando endereço...';
+  const ehCep = somenteNumeros.length === 8 && pareceCep;
+  const enderecoBusca = ehCep
+    ? `${somenteNumeros}, Mauá, SP, Brasil`
+    : `${consulta}, Mauá, SP, Brasil`;
+
+  geocodificadorMapa.geocode({
+    address: enderecoBusca,
+    componentRestrictions: { country: 'BR' },
+  }, (resultados, status) => {
+    if (status !== 'OK' || !resultados || !resultados[0]) {
+      if (status === 'REQUEST_DENIED') {
+        statusBusca.textContent = 'A busca por endereço exige faturamento ativo no Google Cloud e a API Geocoding habilitada.';
+      } else if (status === 'OVER_QUERY_LIMIT') {
+        statusBusca.textContent = 'A busca atingiu o limite temporário. Aguarde um pouco e tente novamente.';
+      } else if (status === 'ZERO_RESULTS') {
+        statusBusca.textContent = 'Não encontramos esse endereço em Mauá. Confira o CEP ou tente outra forma de escrever a rua.';
+      } else {
+        statusBusca.textContent = 'Não foi possível buscar esse endereço. Confira os dados e tente novamente.';
+      }
+      return;
+    }
+
+    const resultado = resultados[0];
+    const localizacao = resultado.geometry.location;
+    mapaAtivo.panTo(localizacao);
+    mapaAtivo.setZoom(16);
+
+    if (marcadorBusca) {
+      marcadorBusca.setMap(null);
+    }
+
+    marcadorBusca = new google.maps.Marker({
+      position: localizacao,
+      map: mapaAtivo,
+      title: `Endereço buscado: ${resultado.formatted_address}`,
+      animation: google.maps.Animation.DROP,
+    });
+    statusBusca.textContent = `Endereço encontrado: ${resultado.formatted_address}. Os ecopontos continuam listados abaixo.`;
+  });
+}
+
+function limparBuscaMapa() {
+  const campoBusca = document.getElementById('busca-endereco');
+  const statusBusca = document.getElementById('status-busca-mapa');
+
+  campoBusca.value = '';
+  statusBusca.textContent = '';
+
+  if (marcadorBusca) {
+    marcadorBusca.setMap(null);
+    marcadorBusca = null;
+  }
+
+  if (mapaAtivo && limitesEcopontos && !limitesEcopontos.isEmpty()) {
+    mapaAtivo.fitBounds(limitesEcopontos);
+  } else if (mapaAtivo) {
+    mapaAtivo.setCenter({ lat: -23.6683, lng: -46.4616 });
+    mapaAtivo.setZoom(12);
+  }
+}
+
 function initMap() {
   const mapaEl = document.getElementById('mapa');
 
@@ -38,7 +130,7 @@ function initMap() {
     return;
   }
 
-  const mapa = new google.maps.Map(mapaEl, {
+  mapaAtivo = new google.maps.Map(mapaEl, {
     center: { lat: -23.6683, lng: -46.4616 },
     zoom: 12,
     mapTypeControl: false,
@@ -46,13 +138,12 @@ function initMap() {
     fullscreenControl: true,
   });
 
-  const bounds = new google.maps.LatLngBounds();
+  geocodificadorMapa = new google.maps.Geocoder();
+  limitesEcopontos = new google.maps.LatLngBounds();
   const infoWindow = new google.maps.InfoWindow();
 
   ecopontos.forEach((ecoponto, index) => {
-    const geocoder = new google.maps.Geocoder();
-
-    geocoder.geocode({ address: ecoponto.endereco }, (results, status) => {
+    geocodificadorMapa.geocode({ address: ecoponto.endereco }, (results, status) => {
       if (status !== 'OK' || !results[0]) {
         console.warn(`Não foi possível localizar: ${ecoponto.nome}`);
         return;
@@ -61,20 +152,20 @@ function initMap() {
       const localizacao = results[0].geometry.location;
       const marcador = new google.maps.Marker({
         position: localizacao,
-        map: mapa,
+        map: mapaAtivo,
         title: ecoponto.nome,
         icon: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
       });
 
-      bounds.extend(localizacao);
-      mapa.fitBounds(bounds);
+      limitesEcopontos.extend(localizacao);
+      mapaAtivo.fitBounds(limitesEcopontos);
 
       const itemLista = document.querySelector(`.lista-ecopontos li[data-index="${index}"]`);
 
       if (itemLista) {
         itemLista.addEventListener('click', () => {
-          mapa.setZoom(16);
-          mapa.panTo(localizacao);
+          mapaAtivo.setZoom(16);
+          mapaAtivo.panTo(localizacao);
           infoWindow.setContent(`
             <div>
               <strong>${ecoponto.nome}</strong><br>
@@ -109,6 +200,16 @@ function carregarGoogleMaps() {
 }
 
 window.addEventListener('DOMContentLoaded', carregarGoogleMaps);
+const formBuscaMapa = document.getElementById('form-busca-mapa');
+const botaoLimparBuscaMapa = document.getElementById('limpar-busca-mapa');
+
+if (formBuscaMapa) {
+  formBuscaMapa.addEventListener('submit', buscarEnderecoNoMapa);
+}
+
+if (botaoLimparBuscaMapa) {
+  botaoLimparBuscaMapa.addEventListener('click', limparBuscaMapa);
+}
 
 function iniciarCarrossel() {
   const carrossel = document.querySelector('.carrossel');

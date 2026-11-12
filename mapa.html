@@ -6,7 +6,7 @@
     <title>EcoMovimento - Mapa de Ecopontos</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pagina-mapa">
 
     <header>
         <a href="index.html" class="logo">
@@ -28,7 +28,17 @@
             <h2>Ecopontos em Mauá</h2>
             <p>Selecione um ponto no mapa ou na lista abaixo para descartar seus resíduos corretamente:</p>
 
-            <ul>
+            <form class="busca-mapa" id="form-busca-mapa" role="search">
+                <label for="busca-endereco">Buscar por CEP ou rua</label>
+                <div class="campo-busca-mapa">
+                    <input type="search" id="busca-endereco" name="endereco" placeholder="Ex.: 09300-000 ou Rua..." autocomplete="street-address" maxlength="160" aria-describedby="status-busca-mapa" required>
+                    <button type="submit">Buscar</button>
+                </div>
+                <button class="limpar-busca-mapa" id="limpar-busca-mapa" type="button">Limpar busca</button>
+                <p class="status-busca-mapa" id="status-busca-mapa" role="status" aria-live="polite"></p>
+            </form>
+
+            <ul aria-label="Lista de ecopontos">
                 <li data-index="0">
                     <strong>Ecoponto Parque das Américas</strong><br>
                     R. Geovani Batista Lorenzetto, 85
@@ -44,7 +54,7 @@
             </ul>
         </aside>
 
-        <div id="mapa" aria-label="Mapa com ecopontos"></div>
+        <div id="mapa" role="region" aria-label="Mapa com ecopontos"></div>
     </main>
 
     <script src="script.js"></script>

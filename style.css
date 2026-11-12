@@ -86,12 +86,87 @@ header .menu-links a:hover {
     padding: 25px;
     border-radius: 12px;
     width: 350px;
+    box-sizing: border-box;
+    flex: 0 0 350px;
     overflow-y: auto;
 }
 
 .lista-ecopontos h2 {
     margin-top: 0;
     color: #a2d2a9;
+}
+
+.busca-mapa {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0 24px;
+}
+
+.busca-mapa label {
+    font-weight: bold;
+}
+
+.campo-busca-mapa {
+    display: flex;
+    gap: 8px;
+}
+
+.campo-busca-mapa input {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #b9c1bb;
+    border-radius: 8px;
+    background: white;
+    color: #20231f;
+    font: inherit;
+}
+
+.campo-busca-mapa input:focus-visible,
+.campo-busca-mapa button:focus-visible,
+.limpar-busca-mapa:focus-visible {
+    outline: 3px solid #a2d2a9;
+    outline-offset: 3px;
+}
+
+.campo-busca-mapa button {
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    border: 1px solid #16874f;
+    border-radius: 8px;
+    background: #16874f;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.campo-busca-mapa button:hover {
+    background: #116d40;
+}
+
+.limpar-busca-mapa {
+    min-height: 42px;
+    padding: 8px 12px;
+    border: 1px solid #a2d2a9;
+    border-radius: 8px;
+    background: transparent;
+    color: #c5e5ca;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.limpar-busca-mapa:hover {
+    background: rgba(162, 210, 169, 0.14);
+}
+
+.status-busca-mapa {
+    min-height: 1.4em;
+    margin: 0;
+    color: #f0f3f0;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 .lista-ecopontos ul {
@@ -111,7 +186,9 @@ header .menu-links a:hover {
 /* Área reservada para o Google Maps */
 #mapa {
     flex: 1;
+    min-width: 0;
     min-height: 500px;
+    overflow: hidden;
     background-color: #2b2b2b;
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.2);
@@ -716,5 +793,34 @@ header .menu-links a:hover {
 
     .acoes-dialogo {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .pagina-mapa header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 24px;
+    }
+
+    .pagina-mapa header .menu-links {
+        flex-wrap: wrap;
+    }
+
+    .container-mapa {
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        padding: 20px 16px;
+    }
+
+    .lista-ecopontos {
+        width: 100%;
+        max-height: 55vh;
+        flex-basis: auto;
+    }
+
+    #mapa {
+        min-height: 55vh;
     }
 }
