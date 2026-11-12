@@ -3,35 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoMovimento - Contatos e FAQ</title>
+    <meta name="description" content="Entre em contato com a equipe EcoMovimento de Mauá.">
+    <title>EcoMovimento - Contatos</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pagina-contato">
 <header>
     <a href="index.html" class="logo">
-        <img src="ecoponto.png" alt="EcoMovimento">
+        <img src="ecoponto.png" alt="EcoMovimento - página inicial">
     </a>
 
-    <nav class="menu-links">
+    <nav class="menu-links" aria-label="Navegação principal">
         <a href="index.html">ecoponto</a>
         <a href="mapa.html">MAPA</a>
         <a href="blog.html">BLOG</a>
-        <a href="contatos.html">CONTATOS</a>
-        <a href="denuncia.html">DISQUE DENUNCIA</a>
+        <a href="contatos.html" aria-current="page">CONTATOS</a>
+        <a href="denuncia.html">DISQUE DENÚNCIA</a>
         <a href="fag.html">FAQ</a>
     </nav>
 </header>
 
-    <main class="container-contato">
-        <section class="caixa-info">
-            <h1>Fale Conosco</h1>
-            <p><strong>E-mail:</strong> contato@ecomovimento.maua.br</p>
-            <p><strong>Telefone:</strong> (11) 4512-7500</p>
-            <p><strong>Endereço:</strong> Prefeitura Municipal de Mauá - SP</p>
-        </section>
+<main class="container-contato">
+    <section class="form-contato" aria-labelledby="titulo-contato">
+        <h1 id="titulo-contato">Fale Conosco</h1>
+        <p class="contato-intro">Tem uma dúvida ou sugestão sobre o EcoMovimento? Envie sua mensagem para nossa equipe.</p>
 
-       
-    </main>
+        <form id="form-contato">
+            <div class="campo-contato">
+                <label for="nome-contato">Seu nome <span>(opcional)</span></label>
+                <input type="text" id="nome-contato" name="nome" autocomplete="name" maxlength="120" placeholder="Como podemos chamar você?">
+            </div>
 
+            <div class="campo-contato">
+                <label for="email-contato">Seu e-mail <span class="campo-obrigatorio">(obrigatório)</span></label>
+                <input type="email" id="email-contato" name="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" aria-describedby="dica-email" required>
+                <small id="dica-email">Usaremos este endereço para identificar sua mensagem e facilitar uma resposta.</small>
+            </div>
+
+            <div class="campo-contato">
+                <label for="assunto-contato">Assunto <span class="campo-obrigatorio">(obrigatório)</span></label>
+                <input type="text" id="assunto-contato" name="assunto" maxlength="120" placeholder="Ex.: dúvida sobre um ecoponto" required>
+            </div>
+
+            <div class="campo-contato">
+                <label for="mensagem-contato">Sua mensagem <span class="campo-obrigatorio">(obrigatório)</span></label>
+                <textarea id="mensagem-contato" name="mensagem" rows="5" maxlength="3000" placeholder="Conte para nós como podemos ajudar." required></textarea>
+                <small>Não inclua dados pessoais sensíveis.</small>
+            </div>
+
+            <p class="aviso-email">Antes de abrir seu aplicativo de e-mail, você poderá revisar a mensagem. Ela só será enviada quando você confirmar o envio por lá.</p>
+            <button type="submit" class="botao-contato">Revisar mensagem</button>
+            <p id="status-contato" class="status-contato" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <aside class="cartao-canais" aria-labelledby="titulo-canais">
+        <span class="selo-canais" aria-hidden="true">@</span>
+        <h2 id="titulo-canais">Outros canais de contato</h2>
+        <p>Se preferir, fale diretamente com a equipe pelos canais abaixo.</p>
+
+        <div class="canal-contato">
+            <h3>E-mail</h3>
+            <a href="mailto:contato@ecomovimento.maua.br">contato@ecomovimento.maua.br</a>
+        </div>
+        <div class="canal-contato">
+            <h3>Telefone</h3>
+            <a href="tel:+551145127500">(11) 4512-7500</a>
+        </div>
+        <div class="canal-contato">
+            <h3>Localização</h3>
+            <p>Prefeitura Municipal de Mauá - SP</p>
+        </div>
+    </aside>
+</main>
+
+<dialog class="dialogo-contato" id="confirmacao-contato" aria-labelledby="titulo-confirmacao">
+    <form method="dialog">
+        <button class="fechar-dialogo" value="cancel" aria-label="Fechar confirmação">×</button>
+    </form>
+    <span class="icone-confirmacao" aria-hidden="true">✓</span>
+    <h2 id="titulo-confirmacao">Revisar sua mensagem</h2>
+    <p>Confira o assunto e o texto antes de continuar. Seu aplicativo de e-mail será aberto para você concluir o envio.</p>
+    <div class="resumo-contato" id="resumo-contato"></div>
+    <div class="acoes-dialogo">
+        <button type="button" class="botao-revisar" id="voltar-contato">Voltar e revisar</button>
+        <a class="botao-confirmar" id="confirmar-contato">Abrir e-mail</a>
+    </div>
+</dialog>
+
+<script src="contatos.js"></script>
 </body>
 </html>

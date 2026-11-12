@@ -418,3 +418,303 @@ header .menu-links a:hover {
         height: 36px;
     }
 }
+
+/* FORMULÁRIO DE CONTATO */
+.pagina-contato header {
+    gap: 16px;
+}
+
+.pagina-contato header .menu-links a[aria-current="page"] {
+    color: #a2d2a9;
+}
+
+.container-contato {
+    width: min(1180px, calc(100% - 48px));
+    margin: 28px auto 48px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    align-items: center;
+    gap: 32px;
+}
+
+.form-contato {
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.78);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+.form-contato h1 {
+    margin: 0 0 8px;
+    color: #a2d2a9;
+    font-size: clamp(28px, 4vw, 36px);
+}
+
+.contato-intro {
+    max-width: 620px;
+    margin: 0 0 24px;
+    line-height: 1.55;
+}
+
+.form-contato form {
+    display: grid;
+    gap: 16px;
+}
+
+.campo-contato {
+    display: grid;
+    gap: 7px;
+}
+
+.campo-contato label {
+    font-weight: bold;
+}
+
+.campo-contato label span,
+.campo-contato small {
+    color: #d2d8d2;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.campo-contato .campo-obrigatorio {
+    color: #ffd1ca;
+}
+
+.campo-contato input,
+.campo-contato textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #7b827d;
+    border-radius: 8px;
+    background: #242624;
+    color: white;
+    font: inherit;
+}
+
+.campo-contato textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.campo-contato input::placeholder,
+.campo-contato textarea::placeholder {
+    color: #c4c8c4;
+    opacity: 1;
+}
+
+.campo-contato input:focus-visible,
+.campo-contato textarea:focus-visible,
+.botao-contato:focus-visible,
+.dialogo-contato button:focus-visible,
+.dialogo-contato a:focus-visible {
+    outline: 3px solid #a2d2a9;
+    outline-offset: 3px;
+}
+
+.aviso-email {
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #20231f;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.botao-contato,
+.botao-confirmar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 11px 20px;
+    border: 1px solid #087443;
+    border-radius: 8px;
+    background: #087443;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botao-contato:hover,
+.botao-confirmar:hover {
+    background: #066238;
+}
+
+.status-contato {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.cartao-canais {
+    padding: 32px;
+    border-radius: 18px;
+    background: #fff;
+    color: #20231f;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+.selo-canais,
+.icone-confirmacao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #16874f;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cartao-canais h2 {
+    margin: 18px 0 8px;
+    color: #17211b;
+    font-size: 26px;
+}
+
+.cartao-canais > p {
+    margin: 0 0 22px;
+    line-height: 1.55;
+}
+
+.canal-contato {
+    padding: 16px 0;
+    border-top: 1px solid #e2e7e3;
+}
+
+.canal-contato h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.canal-contato p {
+    margin: 0;
+}
+
+.canal-contato a {
+    color: #08683d;
+    overflow-wrap: anywhere;
+}
+
+.dialogo-contato {
+    width: min(520px, calc(100% - 40px));
+    max-width: none;
+    box-sizing: border-box;
+    padding: 30px;
+    border: 0;
+    border-radius: 18px;
+    color: #20231f;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.dialogo-contato::backdrop {
+    background: rgba(0, 0, 0, 0.64);
+}
+
+.dialogo-contato > form {
+    margin: 0;
+}
+
+.fechar-dialogo {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #515851;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.dialogo-contato .icone-confirmacao {
+    width: 48px;
+    height: 48px;
+    font-size: 30px;
+}
+
+.dialogo-contato h2 {
+    margin: 14px 0 8px;
+    color: #17211b;
+    font-size: 25px;
+}
+
+.dialogo-contato > p {
+    line-height: 1.55;
+}
+
+.resumo-contato {
+    max-height: 180px;
+    overflow: auto;
+    margin: 18px 0;
+    padding: 14px;
+    border-radius: 8px;
+    background: #f0f3f0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.acoes-dialogo {
+    display: flex;
+    gap: 12px;
+}
+
+.botao-revisar,
+.botao-confirmar {
+    flex: 1;
+    min-width: 0;
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+.botao-revisar {
+    padding: 10px 14px;
+    border: 1px solid #087443;
+    border-radius: 8px;
+    background: white;
+    color: #087443;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-revisar:hover {
+    background: #edf6f0;
+}
+
+@media (max-width: 800px) {
+    .pagina-contato header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 24px;
+    }
+
+    .pagina-contato header .menu-links {
+        flex-wrap: wrap;
+    }
+
+    .container-contato {
+        grid-template-columns: 1fr;
+        width: min(640px, calc(100% - 32px));
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-contato,
+    .cartao-canais {
+        padding: 22px;
+    }
+
+    .acoes-dialogo {
+        flex-direction: column;
+    }
+}
