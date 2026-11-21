@@ -824,3 +824,209 @@ header .menu-links a:hover {
         min-height: 55vh;
     }
 }
+
+/* REDESIGN: cabeçalhos com imagem, conteúdo claro e navegação responsiva */
+html { scroll-behavior: smooth; }
+body { background: #f4f7f4; color: #20251f; }
+
+header {
+    position: relative;
+    z-index: 10;
+    min-height: 88px;
+    box-sizing: border-box;
+    padding: 14px 5vw;
+    background: rgba(20, 43, 25, 0.82);
+    backdrop-filter: blur(8px);
+}
+header img { width: 220px; height: 66px; object-fit: contain; }
+header .menu-links { gap: clamp(10px, 2vw, 26px); }
+header .menu-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: .35px;
+}
+.menu-icone {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+header .menu-links a:hover .menu-icone,
+header .menu-links a[aria-current="page"] .menu-icone {
+    transform: translateY(-1px);
+}
+.menu-icone { transition: transform .2s ease; }
+header .menu-links a:hover, header .menu-links a[aria-current="page"] { color: #b9ddb8; }
+
+.pagina-inicial header { position: absolute; top: 0; left: 0; width: 100%; background: rgba(20, 43, 25, 0.72); }
+.hero-card .botao { display: inline-block; margin-top: 8px; padding: 12px 22px; border-radius: 6px; font-weight: 800; text-decoration: none; }
+.hero-inicial {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 112px 7vw 48px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(12, 27, 15, .72), rgba(12, 27, 15, .12)), url('folhas.jpg') center/cover;
+    color: white;
+}
+.hero-card {
+    max-width: 540px;
+    padding: 30px 34px;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 12px;
+    background: rgba(20, 38, 23, .72);
+    backdrop-filter: blur(4px);
+}
+.hero-etiqueta, .secao-etiqueta { margin: 0 0 8px; color: #c8e4c8; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; }
+.hero-card h1 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 54px); line-height: 1.05; }
+.hero-card p:not(.hero-etiqueta) { max-width: 470px; font-size: 17px; line-height: 1.6; }
+.hero-card .botao { background: #eff5ef; color: #1f3e28; }
+.hero-card .botao:hover { background: #cfe6d0; }
+
+.secao-projeto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1180px;
+    margin: 52px auto;
+    min-height: 390px;
+    background: white;
+    box-shadow: 0 16px 44px rgba(35, 55, 39, .10);
+}
+.projeto-imagem { min-height: 390px; background: url('folhas.jpg') center/cover; }
+.projeto-conteudo { display: flex; flex-direction: column; justify-content: center; padding: 44px; }
+.projeto-conteudo .secao-etiqueta { color: #4d8157; }
+.projeto-conteudo h2 { margin: 4px 0 14px; color: #1d3b25; font-size: clamp(32px, 4vw, 46px); }
+.projeto-conteudo p { line-height: 1.7; }
+.projeto-acoes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.botao-verde { background: #17683d !important; color: white !important; }
+.botao-claro { background: #eef3ef !important; color: #17683d !important; border: 1px solid #cbd9ce; }
+
+.pagina-inicial .carrossel-reciclagem { max-width: 1180px; color: #20251f; }
+.pagina-inicial .carrossel-intro h2 { margin: 8px 0; color: #1d3b25; font-size: clamp(28px, 4vw, 42px); }
+.pagina-inicial .card-programa { border-color: #dce6df; background: white; color: #252c26; box-shadow: 0 12px 30px rgba(35,55,39,.10); }
+.pagina-inicial .card-programa .programa-destaque { color: #3e6946; }
+.pagina-inicial .carrossel-controle { background: white; border-color: #c8d5ca; color: #285436; }
+.pagina-inicial .carrossel-paginacao button { background: #c4cdc6; }
+.pagina-inicial .carrossel-paginacao button[aria-current="true"] { background: #17683d; }
+.pagina-inicial .carrossel-aviso { color: #687168; }
+
+.pagina-mapa, .pagina-denuncia, .pagina-contato, .pagina-blog, .pagina-faq { background: #fff; }
+.pagina-mapa header, .pagina-denuncia header, .pagina-contato header, .pagina-blog header, .pagina-faq header {
+    background: linear-gradient(90deg, rgba(19,48,27,.82), rgba(19,48,27,.58)), url('folhas.jpg') center/cover;
+}
+
+.container-mapa { height: calc(100vh - 118px); padding: 28px 5vw 40px; background: #fff; }
+.lista-ecopontos { background: white; color: #252c26; border: 1px solid #dde5df; box-shadow: 0 12px 32px rgba(35,55,39,.10); }
+.lista-ecopontos h2 { color: #17683d; }
+.status-busca-mapa { color: #687168; }
+.limpar-busca-mapa { border-color: #17683d; color: #17683d; }
+.lista-ecopontos li { background: #f2f5f2; color: #2c332d; border: 1px solid transparent; }
+.lista-ecopontos li:hover { background: #e8f2e9; border-color: #b9d2be; }
+#mapa { border: 1px solid #dce5de; background: #edf1ed; }
+
+.container-form { max-width: 680px; margin: 48px auto; background: white; color: #252c26; border: 1px solid #dfe6e1; box-shadow: 0 14px 38px rgba(35,55,39,.10); }
+.container-form h1 { color: #17683d; }
+.form-eco input, .form-eco textarea { background: #fff; color: #252c26; border: 1px solid #aebbb1; }
+.form-eco input:focus, .form-eco textarea:focus { border-color: #17683d; outline: 3px solid rgba(23,104,61,.12); }
+.form-eco .botao { border: 0; background: #17683d; }
+
+.pagina-contato .container-contato { margin-top: 48px; }
+.pagina-contato .form-contato { background: #fff; color: #252c26; border: 1px solid #dde5df; box-shadow: 0 14px 38px rgba(35,55,39,.10); }
+.pagina-contato .form-contato h1 { color: #17683d; }
+.pagina-contato .contato-intro { color: #687168; }
+.pagina-contato .campo-contato label span, .pagina-contato .campo-contato small { color: #687168; }
+.pagina-contato .campo-contato input, .pagina-contato .campo-contato textarea { background: #fff; color: #252c26; border: 1px solid #aebbb1; }
+
+.container-blog { max-width: 1100px; padding: 48px 24px; color: #252c26; }
+.container-blog h1 { color: #17683d; }
+.card-post { background: #fff; color: #252c26; border: 1px solid #dde5df; border-left: 5px solid #17683d; box-shadow: 0 10px 28px rgba(35,55,39,.08); }
+.card-post .leia-mais { color: #17683d; }
+
+.pagina-faq header { margin-bottom: 0; }
+.caixa-faq { max-width: 960px; margin: 48px auto; background: #fff; color: #252c26; border: 1px solid #dde5df; box-shadow: 0 14px 38px rgba(35,55,39,.08); }
+.caixa-faq h2 { color: #17683d; }
+.item-faq { border-bottom: 1px solid #e4eae6; }
+
+/* Página de Disque Denúncia */
+.pagina-denuncia { background: #fff; }
+.denuncia-conteudo { color: #252c26; }
+.denuncia-hero {
+    min-height: 220px;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(12, 27, 15, .72), rgba(12, 27, 15, .38)), url('folhas.jpg') center/cover;
+    color: #fff;
+    text-align: center;
+}
+.denuncia-hero h1 {
+    margin: 0;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: 1px;
+}
+.denuncia-texto {
+    max-width: 1180px;
+    margin: 24px auto 48px;
+    padding: 0 38px;
+    line-height: 1.55;
+}
+.denuncia-texto p { margin: 0 0 24px; }
+.denuncia-texto h2 {
+    margin: 34px 0 18px;
+    font-size: 20px;
+}
+.botao-denuncia {
+    width: min(720px, 100%);
+    min-height: 54px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid #17683d;
+    border-radius: 8px;
+    background: #17683d;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .2s ease;
+}
+.botao-denuncia svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.botao-denuncia:hover { background: #115832; transform: translateY(-2px); }
+
+@media (max-width: 900px) {
+    header { align-items: flex-start; flex-direction: column; gap: 8px; }
+    header img { width: 190px; height: 58px; }
+    header .menu-links { width: 100%; flex-wrap: wrap; }
+    .pagina-inicial header { position: relative; }
+    .hero-inicial { min-height: 480px; padding: 48px 24px; }
+    .secao-projeto { grid-template-columns: 1fr; margin: 32px 24px; }
+    .projeto-imagem { min-height: 260px; }
+}
+@media (max-width: 600px) {
+    header { padding: 12px 16px; }
+    header .menu-links { gap: 10px 14px; }
+    header .menu-links a { font-size: 11px; }
+    .hero-card { padding: 24px 20px; }
+    .projeto-conteudo { padding: 28px 20px; }
+    .container-mapa { height: auto; }
+    .container-form { margin: 24px 16px; }
+}
