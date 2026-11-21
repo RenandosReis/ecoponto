@@ -1,99 +1,196 @@
+<!-- Declara que o documento usa HTML5. -->
 <!DOCTYPE html>
+<!-- Define o elemento raiz da página e seu idioma. -->
 <html lang="pt-BR">
+<!-- Abre a área de metadados da página. -->
 <head>
+    <!-- Define informações técnicas ou responsividade da página. -->
     <meta charset="UTF-8">
+    <!-- Define informações técnicas ou responsividade da página. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define informações técnicas ou responsividade da página. -->
     <meta name="description" content="EcoMovimento — informações sobre descarte consciente em Mauá.">
+    <!-- Define o nome mostrado na aba do navegador. -->
     <title>EcoMovimento - Início</title>
+    <!-- Relaciona um arquivo externo de estilos ao documento. -->
     <link rel="stylesheet" href="style.css">
+<!-- Fecha a área de metadados da página. -->
 </head>
+<!-- Abre o conteúdo visível da página e pode definir uma classe específica. -->
 <body class="pagina-inicial">
+<!-- Abre a área de metadados da página. -->
 <header>
+    <!-- Cria um link para outra página ou endereço externo. -->
     <a href="index.html" class="logo" aria-label="EcoMovimento — página inicial">
+        <!-- Exibe uma imagem e fornece seu texto alternativo. -->
         <img src="ecoponto.png" alt="EcoMovimento">
+    <!-- Insere ou abre um elemento visual da página. -->
     </a>
+    <!-- Abre o menu principal de navegação. -->
     <nav class="menu-links" aria-label="Navegação principal">
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="#projeto"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V9m0 4C8 13 5 10 5 6c4 0 7 3 7 7Zm0 1c4 0 7-3 7-7-4 0-7 3-7 7Z"/></svg><span>ECOPONTO</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="mapa.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Zm0-15v15m6-12v15"/></svg><span>MAPA</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="blog.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/></svg><span>BLOG</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="contatos.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v13H8l-4 3V4Zm4 5h8m-8 4h5"/></svg><span>CONTATOS</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="denuncia.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9h-9V3Zm3 2.2V9h3.8A7 7 0 0 0 15 5.2Z"/></svg><span>DISQUE DENÚNCIA</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="fag.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.3 2.3 0 1 1 3.1 2.2c-.9.4-.9 1.2-.9 1.8m0 3.5h.01"/></svg><span>FAQ</span></a>
+    <!-- Fecha o menu principal de navegação. -->
     </nav>
+<!-- Fecha a área de metadados da página. -->
 </header>
+<!-- Abre a área principal de conteúdo da página. -->
 <main>
+    <!-- Agrupa uma seção relacionada do conteúdo. -->
     <section class="hero-inicial" aria-labelledby="titulo-inicial">
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="hero-card">
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p class="hero-etiqueta">Bem-vindo ao EcoMovimento</p>
+            <!-- Exibe o título principal da página. -->
             <h1 id="titulo-inicial">Juntos por uma Mauá mais sustentável</h1>
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p>Encontre ecopontos, aprenda a separar seus resíduos e participe de uma cidade mais limpa.</p>
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a class="botao" href="#projeto">Conheça o projeto</a>
+        <!-- Fecha o agrupamento de elementos. -->
         </div>
+    <!-- Fecha a seção atual do conteúdo. -->
     </section>
 
+    <!-- Agrupa uma seção relacionada do conteúdo. -->
     <section class="secao-projeto" id="projeto" aria-labelledby="titulo-projeto">
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="projeto-imagem" role="img" aria-label="Vegetação representando sustentabilidade"></div>
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="projeto-conteudo">
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p class="secao-etiqueta">Sobre o projeto</p>
+            <!-- Exibe um título de seção. -->
             <h2 id="titulo-projeto">EcoPonto</h2>
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p>O EcoPonto é uma iniciativa de educação ambiental criada para aproximar a população dos pontos de coleta e ampliar o descarte correto de resíduos em Mauá.</p>
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p>O projeto reúne informações sobre locais de entrega, orientações de reciclagem e canais para dúvidas e denúncias.</p>
+            <!-- Cria um agrupamento genérico de elementos. -->
             <div class="projeto-acoes">
+                <!-- Cria um link para outra página ou endereço externo. -->
                 <a class="botao botao-verde" href="mapa.html">Encontrar um ecoponto</a>
+                <!-- Cria um link para outra página ou endereço externo. -->
                 <a class="botao botao-claro" href="contatos.html">Fale conosco</a>
+            <!-- Fecha o agrupamento de elementos. -->
             </div>
+        <!-- Fecha o agrupamento de elementos. -->
         </div>
+    <!-- Fecha a seção atual do conteúdo. -->
     </section>
 
+    <!-- Agrupa uma seção relacionada do conteúdo. -->
     <section class="carrossel-reciclagem" aria-label="Programas de reciclagem com benefícios">
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="carrossel-intro">
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p class="carrossel-etiqueta">LOGÍSTICA REVERSA</p>
+            <!-- Exibe um título de seção. -->
             <h2>Recicle embalagens e descubra benefícios</h2>
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p>Conheça programas para dar um destino correto às embalagens de cosméticos, limpeza, bebidas e muito mais.</p>
+        <!-- Fecha o agrupamento de elementos. -->
         </div>
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="carrossel" aria-roledescription="carrossel">
+            <!-- Cria um botão ou acionador de ação. -->
             <button class="carrossel-controle anterior" type="button" aria-label="Ver programa anterior">&#10094;</button>
+            <!-- Cria um agrupamento genérico de elementos. -->
             <div class="carrossel-janela">
+                <!-- Insere ou abre um elemento visual da página. -->
                 <article class="card-programa ativo" aria-label="1 de 4">
+                    <!-- Insere ou abre um elemento visual da página. -->
                     <span class="programa-categoria">Limpeza, bebidas e alimentos</span>
+                    <!-- Exibe um subtítulo dentro da seção. -->
                     <h3>Retorna Machine — Triciclo</h3>
+                    <!-- Exibe um parágrafo de texto explicativo. -->
                     <p>Entregue embalagens aceitas nas máquinas e acumule Tricoins para trocar por benefícios disponíveis no programa, que podem variar por região.</p>
+                    <!-- Exibe um parágrafo de texto explicativo. -->
                     <p class="programa-destaque">Em áreas atendidas por distribuidoras parceiras da Neoenergia, o site informa que 150 Tricoins equivalem a R$ 1 de desconto na conta de luz.</p>
+                    <!-- Cria um link para outra página ou endereço externo. -->
                     <a href="https://retornamachine.eco.br/" class="botao" target="_blank" rel="noopener noreferrer">Ver programa</a>
+                <!-- Insere ou abre um elemento visual da página. -->
                 </article>
+                <!-- Insere ou abre um elemento visual da página. -->
                 <article class="card-programa" aria-label="2 de 4" hidden>
+                    <!-- Insere ou abre um elemento visual da página. -->
                     <span class="programa-categoria">Cosméticos</span>
+                    <!-- Exibe um subtítulo dentro da seção. -->
                     <h3>Boti Recicla — O Boticário</h3>
+                    <!-- Exibe um parágrafo de texto explicativo. -->
                     <p>Consulte as lojas participantes e as regras para entregar embalagens de cosméticos vazias para reciclagem.</p>
+                    <!-- Exibe um parágrafo de texto explicativo. -->
                     <p class="programa-destaque">Verifique diretamente com a loja se há benefício ou campanha ativa na sua região.</p>
+                    <!-- Cria um link para outra página ou endereço externo. -->
                     <a href="https://www.boticario.com.br/boti-recicla/" class="botao" target="_blank" rel="noopener noreferrer">Ver Boti Recicla</a>
+                <!-- Insere ou abre um elemento visual da página. -->
                 </article>
+                <!-- Insere ou abre um elemento visual da página. -->
                 <article class="card-programa" aria-label="3 de 4" hidden>
+                    <!-- Insere ou abre um elemento visual da página. -->
                     <span class="programa-categoria">Cosméticos e higiene</span>
+                    <!-- Exibe um subtítulo dentro da seção. -->
                     <h3>Natura — encontre uma loja</h3>
+                    <!-- Exibe um parágrafo de texto explicativo. -->
                     <p>Use o localizador para encontrar uma loja Natura e consultar se ela participa de ações de recebimento de embalagens.</p>
+                    <!-- Exibe um parágrafo de texto explicativo. -->
                     <p class="programa-destaque">As condições e eventuais benefícios devem ser confirmados com a unidade participante.</p>
+                    <!-- Cria um link para outra página ou endereço externo. -->
                     <a href="https://www.natura.com.br/encontre-uma-loja" class="botao" target="_blank" rel="noopener noreferrer">Encontrar uma loja</a>
+                <!-- Insere ou abre um elemento visual da página. -->
                 </article>
+                <!-- Insere ou abre um elemento visual da página. -->
                 <article class="card-programa" aria-label="4 de 4" hidden>
+                    <!-- Insere ou abre um elemento visual da página. -->
                     <span class="programa-categoria">Garrafas, latas e longa vida</span>
+                    <!-- Exibe um subtítulo dentro da seção. -->
                     <h3>Máquinas de reciclagem — Carrefour</h3>
+                    <!-- Exibe um parágrafo de texto explicativo. -->
                     <p>O Grupo Carrefour Brasil já divulgou máquinas de benefícios para reciclagem de embalagens.</p>
+                    <!-- Exibe um parágrafo de texto explicativo. -->
                     <p class="programa-destaque">Consulte a notícia e confirme com a loja se a máquina e a campanha estão disponíveis.</p>
+                    <!-- Cria um link para outra página ou endereço externo. -->
                     <a href="https://www.grupocarrefourbrasil.com.br/news/maquinas-beneficios-reciclagem" class="botao" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+                <!-- Insere ou abre um elemento visual da página. -->
                 </article>
+            <!-- Fecha o agrupamento de elementos. -->
             </div>
+            <!-- Cria um botão ou acionador de ação. -->
             <button class="carrossel-controle proximo" type="button" aria-label="Ver próximo programa">&#10095;</button>
+        <!-- Fecha o agrupamento de elementos. -->
         </div>
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="carrossel-paginacao" aria-label="Escolher programa">
+            <!-- Cria um botão ou acionador de ação. -->
             <button type="button" aria-label="Mostrar programa 1" aria-current="true"></button>
+            <!-- Cria um botão ou acionador de ação. -->
             <button type="button" aria-label="Mostrar programa 2"></button>
+            <!-- Cria um botão ou acionador de ação. -->
             <button type="button" aria-label="Mostrar programa 3"></button>
+            <!-- Cria um botão ou acionador de ação. -->
             <button type="button" aria-label="Mostrar programa 4"></button>
+        <!-- Fecha o agrupamento de elementos. -->
         </div>
+        <!-- Exibe um parágrafo de texto explicativo. -->
         <p class="carrossel-aviso">Materiais aceitos, lojas participantes e benefícios podem mudar. Confira as regras oficiais antes de levar suas embalagens.</p>
+    <!-- Fecha a seção atual do conteúdo. -->
     </section>
+<!-- Fecha a área principal de conteúdo da página. -->
 </main>
+<!-- Carrega o arquivo JavaScript responsável pelas interações. -->
 <script src="script.js"></script>
+<!-- Fecha o conteúdo visível da página. -->
 </body>
+<!-- Fecha o documento HTML. -->
 </html>

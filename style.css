@@ -1,1032 +1,1912 @@
+/* ===============================================================
+   ARQUIVO DE ESTILOS DO SITE
+   Este arquivo define cores, tamanhos, espaçamentos e responsividade.
+   =============================================================== */
 /* 1. CONFIGURAÇÕES GLOBAIS DO SITE */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 body {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-image: url('folhas.jpg');
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-size: cover;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-position: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-repeat: no-repeat;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 100vh;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-family: sans-serif;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* 2. ESTRUTURA DO TOPO (HEADER) */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 header {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex; 
+    /* Define uma propriedade visual para os elementos selecionados. */
     justify-content: space-between;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center; 
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 20px 50px; 
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Tamanho da imagem da Logo */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 header img {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 300px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     height: 80px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Caixinha que segura os links */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 header .menu-links {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 20px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Estilo padrão dos links do menu */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 header .menu-links a {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white; 
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-decoration: none; 
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 14px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-transform: uppercase; 
     transition: 0.3s; /* Transição suave */
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Efeito Hover dos links do menu (CORRIGIDO) */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 header .menu-links a:hover {
     color: #a2d2a9; /* Muda a cor da letra para verde claro ao passar o mouse */
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* 3. CONTEÚDO PRINCIPAL (CARD) */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-principal {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-color: rgba(0, 0, 0, 0.65);
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 40px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 15px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 500px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 80px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-left: 50px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Estilo padrão do Botão Saiba Mais */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-principal .botao {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: inline-block;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-color: #2b2b2b;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-decoration: none;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 12px 30px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 5px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 20px;
     transition: 0.3s; /* Transição suave */
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Efeito Hover do Botão */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-principal .botao:hover {
     background-color: hsl(138, 29%, 25%); /* Muda o fundo do botão para verde escuro */
+/* Fecha o bloco atual de estilos CSS. */
 }
 /* ESTRUTURA DA TELA DO MAPA */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .container-mapa {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 20px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 30px 50px;
     height: calc(100vh - 150px); /* Ajusta a altura na tela */
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Painel da Lista de Ecopontos */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .lista-ecopontos {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-color: rgba(0, 0, 0, 0.75);
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 25px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 350px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-sizing: border-box;
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex: 0 0 350px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     overflow-y: auto;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .lista-ecopontos h2 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #a2d2a9;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .busca-mapa {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: grid;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 10px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 20px 0 24px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .busca-mapa label {
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-busca-mapa {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 8px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-busca-mapa input {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 100%;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-width: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 11px 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid #b9c1bb;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #20231f;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font: inherit;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .campo-busca-mapa input:focus-visible,
+/* Define uma propriedade visual para os elementos selecionados. */
 .campo-busca-mapa button:focus-visible,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .limpar-busca-mapa:focus-visible {
+    /* Define uma propriedade visual para os elementos selecionados. */
     outline: 3px solid #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     outline-offset: 3px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-busca-mapa button {
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex: 0 0 auto;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 10px 16px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid #16874f;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #16874f;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font: inherit;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     cursor: pointer;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-busca-mapa button:hover {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #116d40;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .limpar-busca-mapa {
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 42px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 8px 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: transparent;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #c5e5ca;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font: inherit;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     cursor: pointer;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .limpar-busca-mapa:hover {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(162, 210, 169, 0.14);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .status-busca-mapa {
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 1.4em;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #f0f3f0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 13px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.4;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .lista-ecopontos ul {
+    /* Define uma propriedade visual para os elementos selecionados. */
     list-style: none;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 20px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .lista-ecopontos li {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(255, 255, 255, 0.1);
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-bottom: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 14px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Área reservada para o Google Maps */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 #mapa {
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex: 1;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-width: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 500px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     overflow: hidden;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-color: #2b2b2b;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 2px solid rgba(255, 255, 255, 0.2);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .lista-ecopontos li {
+    /* Define uma propriedade visual para os elementos selecionados. */
     cursor: pointer;
+    /* Define uma propriedade visual para os elementos selecionados. */
     transition: transform 0.2s ease, background 0.2s ease;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .lista-ecopontos li:hover {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(162, 210, 169, 0.2);
+    /* Define uma propriedade visual para os elementos selecionados. */
     transform: translateX(4px);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .mapa-vazio {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     justify-content: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     height: 100%;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 500px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-align: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 30px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #dfece0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(0, 0, 0, 0.4);
+/* Fecha o bloco atual de estilos CSS. */
 }
 /* ESTRUTURA DO BLOG */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .container-blog {
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 30px 50px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 1100px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 auto;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .container-blog h1 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-bottom: 5px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .container-blog .subtitulo {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-bottom: 30px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     opacity: 0.9;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* Organização dos Cards em Grade */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .grid-posts {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex-direction: column;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 20px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-post {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-color: rgba(0, 0, 0, 0.7);
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 25px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-left: 5px solid #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     transition: 0.3s;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-post:hover {
     transform: translateX(5px); /* Efeito sutil de deslizar ao passar o mouse */
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-post h2 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 20px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-post .data {
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     opacity: 0.6;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-bottom: 15px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-post .leia-mais {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-decoration: none;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: inline-block;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 10px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     transition: 0.3s;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-post .leia-mais:hover {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+/* Fecha o bloco atual de estilos CSS. */
 }
 /* ESTRUTURA DO FORMULÁRIO DE DENÚNCIA */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .container-form {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 600px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 40px auto;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-color: rgba(0, 0, 0, 0.75);
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 30px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 12px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .container-form h1 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 0;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .form-eco {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex-direction: column;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 15px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 20px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .form-eco input, .form-eco textarea {
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 6px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid #444;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-color: #222;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-family: sans-serif;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .form-eco label {
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 14px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* ESTRUTURA DE CONTATOS E FAQ */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .container-contato {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 900px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 40px auto;
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex-direction: column;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 30px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .caixa-info, .caixa-faq {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background-color: rgba(0, 0, 0, 0.75);
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 30px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 12px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .caixa-info h1, .caixa-faq h2 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 0;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .item-faq {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 20px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding-bottom: 10px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .item-faq h3 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-bottom: 5px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 16px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* CARROSSEL DE PROGRAMAS DE RECICLAGEM */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-reciclagem {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 1000px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 55px auto;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 0 24px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-intro {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 680px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 auto 28px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-align: center;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Organiza ou delimita uma parte do arquivo de estilos. */
 .carrossel-etiqueta,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .programa-categoria {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 13px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     letter-spacing: 1px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-transform: uppercase;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-intro h1 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 8px 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: clamp(28px, 5vw, 42px);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-intro > p:last-child {
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.6;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 16px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-janela {
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex: 1;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-width: 0;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-programa {
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 300px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 32px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid rgba(162, 210, 169, 0.4);
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 16px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(0, 0, 0, 0.78);
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-programa[hidden] {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: none;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-programa h2 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 12px 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: clamp(24px, 4vw, 34px);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-programa p {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 680px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.6;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-programa .programa-destaque {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #d7ead9;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-programa .botao {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: inline-block;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin-top: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 12px 22px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 6px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #315d3b;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-decoration: none;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .card-programa .botao:hover,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .card-programa .botao:focus-visible {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #42774f;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-controle {
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex: 0 0 44px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 44px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     height: 44px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid rgba(255, 255, 255, 0.45);
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 50%;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(0, 0, 0, 0.65);
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 18px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     cursor: pointer;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .carrossel-controle:hover,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-controle:focus-visible {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #315d3b;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-paginacao {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     justify-content: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 10px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 20px 0 12px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-paginacao button {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 11px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     height: 11px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 50%;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(255, 255, 255, 0.5);
+    /* Define uma propriedade visual para os elementos selecionados. */
     cursor: pointer;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-paginacao button[aria-current="true"] {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     transform: scale(1.2);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .carrossel-aviso {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 760px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 auto;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #e4e9e4;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 13px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.5;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-align: center;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define estilos específicos para diferentes tamanhos de tela. */
 @media (max-width: 600px) {
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .carrossel-reciclagem {
+        /* Define uma propriedade visual para os elementos selecionados. */
         margin: 32px auto;
+        /* Define uma propriedade visual para os elementos selecionados. */
         padding: 0 14px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .carrossel {
+        /* Define uma propriedade visual para os elementos selecionados. */
         gap: 8px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .card-programa {
+        /* Define uma propriedade visual para os elementos selecionados. */
         min-height: 360px;
+        /* Define uma propriedade visual para os elementos selecionados. */
         padding: 22px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .carrossel-controle {
+        /* Define uma propriedade visual para os elementos selecionados. */
         flex-basis: 36px;
+        /* Define uma propriedade visual para os elementos selecionados. */
         width: 36px;
+        /* Define uma propriedade visual para os elementos selecionados. */
         height: 36px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* FORMULÁRIO DE CONTATO */
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .pagina-contato header {
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 16px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .pagina-contato header .menu-links a[aria-current="page"] {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #a2d2a9;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .container-contato {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: min(1180px, calc(100% - 48px));
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 28px auto 48px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: grid;
+    /* Define uma propriedade visual para os elementos selecionados. */
     grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 32px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .form-contato {
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 32px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid rgba(255, 255, 255, 0.16);
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 16px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(0, 0, 0, 0.78);
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .form-contato h1 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 0 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: clamp(28px, 4vw, 36px);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .contato-intro {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 620px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 0 24px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.55;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .form-contato form {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: grid;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 16px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-contato {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: grid;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 7px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-contato label {
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Organiza ou delimita uma parte do arquivo de estilos. */
 .campo-contato label span,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-contato small {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #d2d8d2;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 13px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: normal;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-contato .campo-obrigatorio {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #ffd1ca;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Organiza ou delimita uma parte do arquivo de estilos. */
 .campo-contato input,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-contato textarea {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 100%;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-sizing: border-box;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 12px 14px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid #7b827d;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #242624;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font: inherit;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-contato textarea {
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 130px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     resize: vertical;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .campo-contato input::placeholder,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .campo-contato textarea::placeholder {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #c4c8c4;
+    /* Define uma propriedade visual para os elementos selecionados. */
     opacity: 1;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .campo-contato input:focus-visible,
+/* Define uma propriedade visual para os elementos selecionados. */
 .campo-contato textarea:focus-visible,
+/* Define uma propriedade visual para os elementos selecionados. */
 .botao-contato:focus-visible,
+/* Define uma propriedade visual para os elementos selecionados. */
 .dialogo-contato button:focus-visible,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .dialogo-contato a:focus-visible {
+    /* Define uma propriedade visual para os elementos selecionados. */
     outline: 3px solid #a2d2a9;
+    /* Define uma propriedade visual para os elementos selecionados. */
     outline-offset: 3px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .aviso-email {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 12px 14px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(255, 255, 255, 0.9);
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #20231f;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 14px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.5;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Organiza ou delimita uma parte do arquivo de estilos. */
 .botao-contato,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .botao-confirmar {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: inline-flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     justify-content: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 48px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 11px 20px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid #087443;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #087443;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font: inherit;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-align: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-decoration: none;
+    /* Define uma propriedade visual para os elementos selecionados. */
     cursor: pointer;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .botao-contato:hover,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .botao-confirmar:hover {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #066238;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .status-contato {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.5;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .cartao-canais {
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 32px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 18px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #fff;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #20231f;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Organiza ou delimita uma parte do arquivo de estilos. */
 .selo-canais,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .icone-confirmacao {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: inline-flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     justify-content: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 52px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     height: 52px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 50%;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #16874f;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 28px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .cartao-canais h2 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 18px 0 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #17211b;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 26px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .cartao-canais > p {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 0 22px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.55;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .canal-contato {
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 16px 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-top: 1px solid #e2e7e3;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .canal-contato h3 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 0 6px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 15px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .canal-contato p {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .canal-contato a {
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #08683d;
+    /* Define uma propriedade visual para os elementos selecionados. */
     overflow-wrap: anywhere;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .dialogo-contato {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: min(520px, calc(100% - 40px));
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: none;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-sizing: border-box;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 30px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 18px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #20231f;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .dialogo-contato::backdrop {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(0, 0, 0, 0.64);
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .dialogo-contato > form {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .fechar-dialogo {
+    /* Define uma propriedade visual para os elementos selecionados. */
     position: absolute;
+    /* Define uma propriedade visual para os elementos selecionados. */
     top: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     right: 14px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: transparent;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #515851;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 28px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     cursor: pointer;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .dialogo-contato .icone-confirmacao {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 48px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     height: 48px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 30px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .dialogo-contato h2 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 14px 0 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #17211b;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 25px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .dialogo-contato > p {
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.55;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .resumo-contato {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-height: 180px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     overflow: auto;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 18px 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 14px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #f0f3f0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.5;
+    /* Define uma propriedade visual para os elementos selecionados. */
     overflow-wrap: anywhere;
+    /* Define uma propriedade visual para os elementos selecionados. */
     white-space: pre-wrap;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .acoes-dialogo {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 12px;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Organiza ou delimita uma parte do arquivo de estilos. */
 .botao-revisar,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .botao-confirmar {
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex: 1;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-width: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 48px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-sizing: border-box;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .botao-revisar {
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 10px 14px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid #087443;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #087443;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font: inherit;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: bold;
+    /* Define uma propriedade visual para os elementos selecionados. */
     cursor: pointer;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .botao-revisar:hover {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #edf6f0;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define estilos específicos para diferentes tamanhos de tela. */
 @media (max-width: 800px) {
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .pagina-contato header {
+        /* Define uma propriedade visual para os elementos selecionados. */
         align-items: flex-start;
+        /* Define uma propriedade visual para os elementos selecionados. */
         flex-direction: column;
+        /* Define uma propriedade visual para os elementos selecionados. */
         padding: 16px 24px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .pagina-contato header .menu-links {
+        /* Define uma propriedade visual para os elementos selecionados. */
         flex-wrap: wrap;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .container-contato {
+        /* Define uma propriedade visual para os elementos selecionados. */
         grid-template-columns: 1fr;
+        /* Define uma propriedade visual para os elementos selecionados. */
         width: min(640px, calc(100% - 32px));
+        /* Define uma propriedade visual para os elementos selecionados. */
         margin-top: 16px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define estilos específicos para diferentes tamanhos de tela. */
 @media (max-width: 480px) {
+    /* Organiza ou delimita uma parte do arquivo de estilos. */
     .form-contato,
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .cartao-canais {
+        /* Define uma propriedade visual para os elementos selecionados. */
         padding: 22px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .acoes-dialogo {
+        /* Define uma propriedade visual para os elementos selecionados. */
         flex-direction: column;
+    /* Fecha o bloco atual de estilos CSS. */
     }
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define estilos específicos para diferentes tamanhos de tela. */
 @media (max-width: 760px) {
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .pagina-mapa header {
+        /* Define uma propriedade visual para os elementos selecionados. */
         align-items: flex-start;
+        /* Define uma propriedade visual para os elementos selecionados. */
         flex-direction: column;
+        /* Define uma propriedade visual para os elementos selecionados. */
         padding: 16px 24px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .pagina-mapa header .menu-links {
+        /* Define uma propriedade visual para os elementos selecionados. */
         flex-wrap: wrap;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .container-mapa {
+        /* Define uma propriedade visual para os elementos selecionados. */
         height: auto;
+        /* Define uma propriedade visual para os elementos selecionados. */
         min-height: 0;
+        /* Define uma propriedade visual para os elementos selecionados. */
         flex-direction: column;
+        /* Define uma propriedade visual para os elementos selecionados. */
         padding: 20px 16px;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     .lista-ecopontos {
+        /* Define uma propriedade visual para os elementos selecionados. */
         width: 100%;
+        /* Define uma propriedade visual para os elementos selecionados. */
         max-height: 55vh;
+        /* Define uma propriedade visual para os elementos selecionados. */
         flex-basis: auto;
+    /* Fecha o bloco atual de estilos CSS. */
     }
 
+    /* Abre um bloco de estilos para o elemento ou regra selecionada. */
     #mapa {
+        /* Define uma propriedade visual para os elementos selecionados. */
         min-height: 55vh;
+    /* Fecha o bloco atual de estilos CSS. */
     }
+/* Fecha o bloco atual de estilos CSS. */
 }
 
 /* REDESIGN: cabeçalhos com imagem, conteúdo claro e navegação responsiva */
+/* Define uma propriedade visual para os elementos selecionados. */
 html { scroll-behavior: smooth; }
+/* Define uma propriedade visual para os elementos selecionados. */
 body { background: #f4f7f4; color: #20251f; }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 header {
+    /* Define uma propriedade visual para os elementos selecionados. */
     position: relative;
+    /* Define uma propriedade visual para os elementos selecionados. */
     z-index: 10;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 88px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-sizing: border-box;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 14px 5vw;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(20, 43, 25, 0.82);
+    /* Define uma propriedade visual para os elementos selecionados. */
     backdrop-filter: blur(8px);
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Define uma propriedade visual para os elementos selecionados. */
 header img { width: 220px; height: 66px; object-fit: contain; }
+/* Define uma propriedade visual para os elementos selecionados. */
 header .menu-links { gap: clamp(10px, 2vw, 26px); }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 header .menu-links a {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: inline-flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 7px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #fff;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     letter-spacing: .35px;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .menu-icone {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 18px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     height: 18px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     flex: 0 0 18px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     fill: none;
+    /* Define uma propriedade visual para os elementos selecionados. */
     stroke: currentColor;
+    /* Define uma propriedade visual para os elementos selecionados. */
     stroke-width: 1.8;
+    /* Define uma propriedade visual para os elementos selecionados. */
     stroke-linecap: round;
+    /* Define uma propriedade visual para os elementos selecionados. */
     stroke-linejoin: round;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Define uma propriedade visual para os elementos selecionados. */
 header .menu-links a:hover .menu-icone,
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 header .menu-links a[aria-current="page"] .menu-icone {
+    /* Define uma propriedade visual para os elementos selecionados. */
     transform: translateY(-1px);
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Define uma propriedade visual para os elementos selecionados. */
 .menu-icone { transition: transform .2s ease; }
+/* Define uma propriedade visual para os elementos selecionados. */
 header .menu-links a:hover, header .menu-links a[aria-current="page"] { color: #b9ddb8; }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial header { position: absolute; top: 0; left: 0; width: 100%; background: rgba(20, 43, 25, 0.72); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .hero-card .botao { display: inline-block; margin-top: 8px; padding: 12px 22px; border-radius: 6px; font-weight: 800; text-decoration: none; }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .hero-inicial {
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 520px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 112px 7vw 48px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-sizing: border-box;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: linear-gradient(90deg, rgba(12, 27, 15, .72), rgba(12, 27, 15, .12)), url('folhas.jpg') center/cover;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .hero-card {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 540px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 30px 34px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid rgba(255,255,255,.22);
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: rgba(20, 38, 23, .72);
+    /* Define uma propriedade visual para os elementos selecionados. */
     backdrop-filter: blur(4px);
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Define uma propriedade visual para os elementos selecionados. */
 .hero-etiqueta, .secao-etiqueta { margin: 0 0 8px; color: #c8e4c8; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .hero-card h1 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 54px); line-height: 1.05; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .hero-card p:not(.hero-etiqueta) { max-width: 470px; font-size: 17px; line-height: 1.6; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .hero-card .botao { background: #eff5ef; color: #1f3e28; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .hero-card .botao:hover { background: #cfe6d0; }
 
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .secao-projeto {
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: grid;
+    /* Define uma propriedade visual para os elementos selecionados. */
     grid-template-columns: 1fr 1fr;
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 1180px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 52px auto;
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 390px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-shadow: 0 16px 44px rgba(35, 55, 39, .10);
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Define uma propriedade visual para os elementos selecionados. */
 .projeto-imagem { min-height: 390px; background: url('folhas.jpg') center/cover; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .projeto-conteudo { display: flex; flex-direction: column; justify-content: center; padding: 44px; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .projeto-conteudo .secao-etiqueta { color: #4d8157; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .projeto-conteudo h2 { margin: 4px 0 14px; color: #1d3b25; font-size: clamp(32px, 4vw, 46px); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .projeto-conteudo p { line-height: 1.7; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .projeto-acoes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .botao-verde { background: #17683d !important; color: white !important; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .botao-claro { background: #eef3ef !important; color: #17683d !important; border: 1px solid #cbd9ce; }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial .carrossel-reciclagem { max-width: 1180px; color: #20251f; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial .carrossel-intro h2 { margin: 8px 0; color: #1d3b25; font-size: clamp(28px, 4vw, 42px); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial .card-programa { border-color: #dce6df; background: white; color: #252c26; box-shadow: 0 12px 30px rgba(35,55,39,.10); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial .card-programa .programa-destaque { color: #3e6946; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial .carrossel-controle { background: white; border-color: #c8d5ca; color: #285436; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial .carrossel-paginacao button { background: #c4cdc6; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial .carrossel-paginacao button[aria-current="true"] { background: #17683d; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-inicial .carrossel-aviso { color: #687168; }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-mapa, .pagina-denuncia, .pagina-contato, .pagina-blog, .pagina-faq { background: #fff; }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .pagina-mapa header, .pagina-denuncia header, .pagina-contato header, .pagina-blog header, .pagina-faq header {
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: linear-gradient(90deg, rgba(19,48,27,.82), rgba(19,48,27,.58)), url('folhas.jpg') center/cover;
+/* Fecha o bloco atual de estilos CSS. */
 }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .container-mapa { height: calc(100vh - 118px); padding: 28px 5vw 40px; background: #fff; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .lista-ecopontos { background: white; color: #252c26; border: 1px solid #dde5df; box-shadow: 0 12px 32px rgba(35,55,39,.10); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .lista-ecopontos h2 { color: #17683d; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .status-busca-mapa { color: #687168; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .limpar-busca-mapa { border-color: #17683d; color: #17683d; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .lista-ecopontos li { background: #f2f5f2; color: #2c332d; border: 1px solid transparent; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .lista-ecopontos li:hover { background: #e8f2e9; border-color: #b9d2be; }
+/* Define uma propriedade visual para os elementos selecionados. */
 #mapa { border: 1px solid #dce5de; background: #edf1ed; }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .container-form { max-width: 680px; margin: 48px auto; background: white; color: #252c26; border: 1px solid #dfe6e1; box-shadow: 0 14px 38px rgba(35,55,39,.10); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .container-form h1 { color: #17683d; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .form-eco input, .form-eco textarea { background: #fff; color: #252c26; border: 1px solid #aebbb1; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .form-eco input:focus, .form-eco textarea:focus { border-color: #17683d; outline: 3px solid rgba(23,104,61,.12); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .form-eco .botao { border: 0; background: #17683d; }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-contato .container-contato { margin-top: 48px; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-contato .form-contato { background: #fff; color: #252c26; border: 1px solid #dde5df; box-shadow: 0 14px 38px rgba(35,55,39,.10); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-contato .form-contato h1 { color: #17683d; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-contato .contato-intro { color: #687168; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-contato .campo-contato label span, .pagina-contato .campo-contato small { color: #687168; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-contato .campo-contato input, .pagina-contato .campo-contato textarea { background: #fff; color: #252c26; border: 1px solid #aebbb1; }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .container-blog { max-width: 1100px; padding: 48px 24px; color: #252c26; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .container-blog h1 { color: #17683d; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .card-post { background: #fff; color: #252c26; border: 1px solid #dde5df; border-left: 5px solid #17683d; box-shadow: 0 10px 28px rgba(35,55,39,.08); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .card-post .leia-mais { color: #17683d; }
 
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-faq header { margin-bottom: 0; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .caixa-faq { max-width: 960px; margin: 48px auto; background: #fff; color: #252c26; border: 1px solid #dde5df; box-shadow: 0 14px 38px rgba(35,55,39,.08); }
+/* Define uma propriedade visual para os elementos selecionados. */
 .caixa-faq h2 { color: #17683d; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .item-faq { border-bottom: 1px solid #e4eae6; }
 
 /* Página de Disque Denúncia */
+/* Define uma propriedade visual para os elementos selecionados. */
 .pagina-denuncia { background: #fff; }
+/* Define uma propriedade visual para os elementos selecionados. */
 .denuncia-conteudo { color: #252c26; }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .denuncia-hero {
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 220px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     justify-content: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: linear-gradient(90deg, rgba(12, 27, 15, .72), rgba(12, 27, 15, .38)), url('folhas.jpg') center/cover;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: #fff;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-align: center;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .denuncia-hero h1 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: clamp(32px, 5vw, 52px);
+    /* Define uma propriedade visual para os elementos selecionados. */
     letter-spacing: 1px;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .denuncia-texto {
+    /* Define uma propriedade visual para os elementos selecionados. */
     max-width: 1180px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 24px auto 48px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     padding: 0 38px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     line-height: 1.55;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Define uma propriedade visual para os elementos selecionados. */
 .denuncia-texto p { margin: 0 0 24px; }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .denuncia-texto h2 {
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 34px 0 18px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-size: 20px;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .botao-denuncia {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: min(720px, 100%);
+    /* Define uma propriedade visual para os elementos selecionados. */
     min-height: 54px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     margin: 0 auto;
+    /* Define uma propriedade visual para os elementos selecionados. */
     box-sizing: border-box;
+    /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
+    /* Define uma propriedade visual para os elementos selecionados. */
     align-items: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     justify-content: center;
+    /* Define uma propriedade visual para os elementos selecionados. */
     gap: 12px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border: 1px solid #17683d;
+    /* Define uma propriedade visual para os elementos selecionados. */
     border-radius: 8px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     background: #17683d;
+    /* Define uma propriedade visual para os elementos selecionados. */
     color: white;
+    /* Define uma propriedade visual para os elementos selecionados. */
     font-weight: 800;
+    /* Define uma propriedade visual para os elementos selecionados. */
     text-decoration: none;
+    /* Define uma propriedade visual para os elementos selecionados. */
     transition: .2s ease;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .botao-denuncia svg {
+    /* Define uma propriedade visual para os elementos selecionados. */
     width: 21px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     height: 21px;
+    /* Define uma propriedade visual para os elementos selecionados. */
     fill: none;
+    /* Define uma propriedade visual para os elementos selecionados. */
     stroke: currentColor;
+    /* Define uma propriedade visual para os elementos selecionados. */
     stroke-width: 2;
+    /* Define uma propriedade visual para os elementos selecionados. */
     stroke-linecap: round;
+    /* Define uma propriedade visual para os elementos selecionados. */
     stroke-linejoin: round;
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Define uma propriedade visual para os elementos selecionados. */
 .botao-denuncia:hover { background: #115832; transform: translateY(-2px); }
 
+/* Define estilos específicos para diferentes tamanhos de tela. */
 @media (max-width: 900px) {
+    /* Define uma propriedade visual para os elementos selecionados. */
     header { align-items: flex-start; flex-direction: column; gap: 8px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     header img { width: 190px; height: 58px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     header .menu-links { width: 100%; flex-wrap: wrap; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     .pagina-inicial header { position: relative; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     .hero-inicial { min-height: 480px; padding: 48px 24px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     .secao-projeto { grid-template-columns: 1fr; margin: 32px 24px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     .projeto-imagem { min-height: 260px; }
+/* Fecha o bloco atual de estilos CSS. */
 }
+/* Define estilos específicos para diferentes tamanhos de tela. */
 @media (max-width: 600px) {
+    /* Define uma propriedade visual para os elementos selecionados. */
     header { padding: 12px 16px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     header .menu-links { gap: 10px 14px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     header .menu-links a { font-size: 11px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     .hero-card { padding: 24px 20px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     .projeto-conteudo { padding: 28px 20px; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     .container-mapa { height: auto; }
+    /* Define uma propriedade visual para os elementos selecionados. */
     .container-form { margin: 24px 16px; }
+/* Fecha o bloco atual de estilos CSS. */
 }

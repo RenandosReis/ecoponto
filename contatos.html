@@ -1,96 +1,185 @@
+<!-- Declara que o documento usa HTML5. -->
 <!DOCTYPE html>
+<!-- Define o elemento raiz da página e seu idioma. -->
 <html lang="pt-BR">
+<!-- Abre a área de metadados da página. -->
 <head>
+    <!-- Define informações técnicas ou responsividade da página. -->
     <meta charset="UTF-8">
+    <!-- Define informações técnicas ou responsividade da página. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define informações técnicas ou responsividade da página. -->
     <meta name="description" content="Entre em contato com a equipe EcoMovimento de Mauá.">
+    <!-- Define o nome mostrado na aba do navegador. -->
     <title>EcoMovimento - Contatos</title>
+    <!-- Relaciona um arquivo externo de estilos ao documento. -->
     <link rel="stylesheet" href="style.css">
+<!-- Fecha a área de metadados da página. -->
 </head>
+<!-- Abre o conteúdo visível da página e pode definir uma classe específica. -->
 <body class="pagina-contato">
+<!-- Cabeçalho: contém o logo e o menu de navegação principal. -->
+<!-- Abre a área de metadados da página. -->
 <header>
+    <!-- Cria um link para outra página ou endereço externo. -->
     <a href="index.html" class="logo">
+        <!-- Exibe uma imagem e fornece seu texto alternativo. -->
         <img src="ecoponto.png" alt="EcoMovimento - página inicial">
+    <!-- Insere ou abre um elemento visual da página. -->
     </a>
 
+    <!-- Abre o menu principal de navegação. -->
     <nav class="menu-links" aria-label="Navegação principal">
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="index.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V9m0 4C8 13 5 10 5 6c4 0 7 3 7 7Zm0 1c4 0 7-3 7-7-4 0-7 3-7 7Z"/></svg><span>ECOPONTO</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="mapa.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Zm0-15v15m6-12v15"/></svg><span>MAPA</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="blog.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/></svg><span>BLOG</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="contatos.html" aria-current="page"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v13H8l-4 3V4Zm4 5h8m-8 4h5"/></svg><span>CONTATOS</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="denuncia.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9h-9V3Zm3 2.2V9h3.8A7 7 0 0 0 15 5.2Z"/></svg><span>DISQUE DENÚNCIA</span></a>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="fag.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.3 2.3 0 1 1 3.1 2.2c-.9.4-.9 1.2-.9 1.8m0 3.5h.01"/></svg><span>FAQ</span></a>
+    <!-- Fecha o menu principal de navegação. -->
     </nav>
+<!-- Fecha a área de metadados da página. -->
 </header>
 
+<!-- Abre a área principal de conteúdo da página. -->
 <main class="container-contato">
+    <!-- Seção: agrupa o conteúdo relacionado desta área da página. -->
+    <!-- Agrupa uma seção relacionada do conteúdo. -->
     <section class="form-contato" aria-labelledby="titulo-contato">
+        <!-- Exibe o título principal da página. -->
         <h1 id="titulo-contato">Fale Conosco</h1>
+        <!-- Exibe um parágrafo de texto explicativo. -->
         <p class="contato-intro">Tem uma dúvida ou sugestão sobre o EcoMovimento? Envie sua mensagem para nossa equipe.</p>
 
-        <form id="form-contato">
+        <!-- Formulário: reúne os campos que recebem dados do visitante. -->
+    <!-- Abre o formulário usado para coletar dados. -->
+    <form id="form-contato">
+            <!-- Cria um agrupamento genérico de elementos. -->
             <div class="campo-contato">
+                <!-- Relaciona um texto explicativo ao campo do formulário. -->
                 <label for="nome-contato">Seu nome <span>(opcional)</span></label>
+                <!-- Cria um campo de entrada de dados. -->
                 <input type="text" id="nome-contato" name="nome" autocomplete="name" maxlength="120" placeholder="Como podemos chamar você?">
+            <!-- Fecha o agrupamento de elementos. -->
             </div>
 
+            <!-- Cria um agrupamento genérico de elementos. -->
             <div class="campo-contato">
+                <!-- Relaciona um texto explicativo ao campo do formulário. -->
                 <label for="email-contato">Seu e-mail <span class="campo-obrigatorio">(obrigatório)</span></label>
+                <!-- Cria um campo de entrada de dados. -->
                 <input type="email" id="email-contato" name="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" aria-describedby="dica-email" required>
+                <!-- Insere ou abre um elemento visual da página. -->
                 <small id="dica-email">Usaremos este endereço para identificar sua mensagem e facilitar uma resposta.</small>
+            <!-- Fecha o agrupamento de elementos. -->
             </div>
 
+            <!-- Cria um agrupamento genérico de elementos. -->
             <div class="campo-contato">
+                <!-- Relaciona um texto explicativo ao campo do formulário. -->
                 <label for="assunto-contato">Assunto <span class="campo-obrigatorio">(obrigatório)</span></label>
+                <!-- Cria um campo de entrada de dados. -->
                 <input type="text" id="assunto-contato" name="assunto" maxlength="120" placeholder="Ex.: dúvida sobre um ecoponto" required>
+            <!-- Fecha o agrupamento de elementos. -->
             </div>
 
+            <!-- Cria um agrupamento genérico de elementos. -->
             <div class="campo-contato">
+                <!-- Relaciona um texto explicativo ao campo do formulário. -->
                 <label for="mensagem-contato">Sua mensagem <span class="campo-obrigatorio">(obrigatório)</span></label>
+                <!-- Cria um campo amplo para texto de várias linhas. -->
                 <textarea id="mensagem-contato" name="mensagem" rows="5" maxlength="3000" placeholder="Conte para nós como podemos ajudar." required></textarea>
+                <!-- Insere ou abre um elemento visual da página. -->
                 <small>Não inclua dados pessoais sensíveis.</small>
+            <!-- Fecha o agrupamento de elementos. -->
             </div>
 
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p class="aviso-email">Antes de abrir seu aplicativo de e-mail, você poderá revisar a mensagem. Ela só será enviada quando você confirmar o envio por lá.</p>
+            <!-- Cria um botão ou acionador de ação. -->
             <button type="submit" class="botao-contato">Revisar mensagem</button>
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p id="status-contato" class="status-contato" role="status" aria-live="polite"></p>
+        <!-- Fecha o formulário. -->
         </form>
+    <!-- Fecha a seção atual do conteúdo. -->
     </section>
 
+    <!-- Insere ou abre um elemento visual da página. -->
     <aside class="cartao-canais" aria-labelledby="titulo-canais">
+        <!-- Insere ou abre um elemento visual da página. -->
         <span class="selo-canais" aria-hidden="true">@</span>
+        <!-- Exibe um título de seção. -->
         <h2 id="titulo-canais">Outros canais de contato</h2>
+        <!-- Exibe um parágrafo de texto explicativo. -->
         <p>Se preferir, fale diretamente com a equipe pelos canais abaixo.</p>
 
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="canal-contato">
+            <!-- Exibe um subtítulo dentro da seção. -->
             <h3>E-mail</h3>
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a href="mailto:contato@ecomovimento.maua.br">contato@ecomovimento.maua.br</a>
+        <!-- Fecha o agrupamento de elementos. -->
         </div>
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="canal-contato">
+            <!-- Exibe um subtítulo dentro da seção. -->
             <h3>Telefone</h3>
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a href="tel:+551145127500">(11) 4512-7500</a>
+        <!-- Fecha o agrupamento de elementos. -->
         </div>
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div class="canal-contato">
+            <!-- Exibe um subtítulo dentro da seção. -->
             <h3>Localização</h3>
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p>Prefeitura Municipal de Mauá - SP</p>
+        <!-- Fecha o agrupamento de elementos. -->
         </div>
+    <!-- Insere ou abre um elemento visual da página. -->
     </aside>
+<!-- Fecha a área principal de conteúdo da página. -->
 </main>
 
+<!-- Insere ou abre um elemento visual da página. -->
 <dialog class="dialogo-contato" id="confirmacao-contato" aria-labelledby="titulo-confirmacao">
+    <!-- Abre o formulário usado para coletar dados. -->
     <form method="dialog">
+        <!-- Cria um botão ou acionador de ação. -->
         <button class="fechar-dialogo" value="cancel" aria-label="Fechar confirmação">×</button>
+    <!-- Fecha o formulário. -->
     </form>
+    <!-- Insere ou abre um elemento visual da página. -->
     <span class="icone-confirmacao" aria-hidden="true">✓</span>
+    <!-- Exibe um título de seção. -->
     <h2 id="titulo-confirmacao">Revisar sua mensagem</h2>
+    <!-- Exibe um parágrafo de texto explicativo. -->
     <p>Confira o assunto e o texto antes de continuar. Seu aplicativo de e-mail será aberto para você concluir o envio.</p>
+    <!-- Cria um agrupamento genérico de elementos. -->
     <div class="resumo-contato" id="resumo-contato"></div>
+    <!-- Cria um agrupamento genérico de elementos. -->
     <div class="acoes-dialogo">
+        <!-- Cria um botão ou acionador de ação. -->
         <button type="button" class="botao-revisar" id="voltar-contato">Voltar e revisar</button>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a class="botao-confirmar" id="confirmar-contato">Abrir e-mail</a>
+    <!-- Fecha o agrupamento de elementos. -->
     </div>
+<!-- Insere ou abre um elemento visual da página. -->
 </dialog>
 
+<!-- JavaScript: ativa os comportamentos desta página. -->
+<!-- Carrega o arquivo JavaScript responsável pelas interações. -->
 <script src="contatos.js"></script>
+<!-- Fecha o conteúdo visível da página. -->
 </body>
+<!-- Fecha o documento HTML. -->
 </html>

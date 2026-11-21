@@ -1,62 +1,120 @@
+<!-- Declara que o documento usa HTML5. -->
 <!DOCTYPE html>
+<!-- Define o elemento raiz da página e seu idioma. -->
 <html lang="pt-BR">
+<!-- Abre a área de metadados da página. -->
 <head>
+    <!-- Define informações técnicas ou responsividade da página. -->
     <meta charset="UTF-8">
+    <!-- Define informações técnicas ou responsividade da página. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o nome mostrado na aba do navegador. -->
     <title>EcoMovimento - Mapa de Ecopontos</title>
+    <!-- Relaciona um arquivo externo de estilos ao documento. -->
     <link rel="stylesheet" href="style.css">
+<!-- Fecha a área de metadados da página. -->
 </head>
+<!-- Abre o conteúdo visível da página e pode definir uma classe específica. -->
 <body class="pagina-mapa">
 
-    <header>
+    <!-- Cabeçalho: contém o logo e o menu de navegação principal. -->
+<!-- Abre a área de metadados da página. -->
+<header>
+        <!-- Cria um link para outra página ou endereço externo. -->
         <a href="index.html" class="logo">
+            <!-- Exibe uma imagem e fornece seu texto alternativo. -->
             <img src="ecoponto.png" alt="EcoMovimento">
+        <!-- Insere ou abre um elemento visual da página. -->
         </a>
 
+        <!-- Abre o menu principal de navegação. -->
         <nav class="menu-links">
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a href="index.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V9m0 4C8 13 5 10 5 6c4 0 7 3 7 7Zm0 1c4 0 7-3 7-7-4 0-7 3-7 7Z"/></svg><span>ECOPONTO</span></a>
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a href="mapa.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Zm0-15v15m6-12v15"/></svg><span>MAPA</span></a>
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a href="blog.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/></svg><span>BLOG</span></a>
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a href="contatos.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v13H8l-4 3V4Zm4 5h8m-8 4h5"/></svg><span>CONTATOS</span></a>
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a href="denuncia.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9h-9V3Zm3 2.2V9h3.8A7 7 0 0 0 15 5.2Z"/></svg><span>DISQUE DENÚNCIA</span></a>
+            <!-- Cria um link para outra página ou endereço externo. -->
             <a href="fag.html"><svg class="menu-icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.3 2.3 0 1 1 3.1 2.2c-.9.4-.9 1.2-.9 1.8m0 3.5h.01"/></svg><span>FAQ</span></a>
+        <!-- Fecha o menu principal de navegação. -->
         </nav>
+    <!-- Fecha a área de metadados da página. -->
     </header>
 
+    <!-- Abre a área principal de conteúdo da página. -->
     <main class="container-mapa">
+        <!-- Insere ou abre um elemento visual da página. -->
         <aside class="lista-ecopontos">
+            <!-- Exibe um título de seção. -->
             <h2>Ecopontos em Mauá</h2>
+            <!-- Exibe um parágrafo de texto explicativo. -->
             <p>Selecione um ponto no mapa ou na lista abaixo para descartar seus resíduos corretamente:</p>
 
-            <form class="busca-mapa" id="form-busca-mapa" role="search">
+            <!-- Formulário: reúne os campos que recebem dados do visitante. -->
+    <!-- Abre o formulário usado para coletar dados. -->
+    <form class="busca-mapa" id="form-busca-mapa" role="search">
+                <!-- Relaciona um texto explicativo ao campo do formulário. -->
                 <label for="busca-endereco">Buscar por CEP ou rua</label>
+                <!-- Cria um agrupamento genérico de elementos. -->
                 <div class="campo-busca-mapa">
+                    <!-- Cria um campo de entrada de dados. -->
                     <input type="search" id="busca-endereco" name="endereco" placeholder="Ex.: 09300-000 ou Rua..." autocomplete="street-address" maxlength="160" aria-describedby="status-busca-mapa" required>
+                    <!-- Cria um botão ou acionador de ação. -->
                     <button type="submit">Buscar</button>
+                <!-- Fecha o agrupamento de elementos. -->
                 </div>
+                <!-- Cria um botão ou acionador de ação. -->
                 <button class="limpar-busca-mapa" id="limpar-busca-mapa" type="button">Limpar busca</button>
+                <!-- Exibe um parágrafo de texto explicativo. -->
                 <p class="status-busca-mapa" id="status-busca-mapa" role="status" aria-live="polite"></p>
+            <!-- Fecha o formulário. -->
             </form>
 
+            <!-- Insere ou abre um elemento visual da página. -->
             <ul aria-label="Lista de ecopontos">
+                <!-- Insere ou abre um elemento visual da página. -->
                 <li data-index="0">
+                    <!-- Insere ou abre um elemento visual da página. -->
                     <strong>Ecoponto Parque das Américas</strong><br>
+                    <!-- Exibe o texto ou conteúdo dessa linha na página. -->
                     R. Geovani Batista Lorenzetto, 85
+                <!-- Insere ou abre um elemento visual da página. -->
                 </li>
+                <!-- Insere ou abre um elemento visual da página. -->
                 <li data-index="1">
+                    <!-- Insere ou abre um elemento visual da página. -->
                     <strong>Ecoponto Jardim Cerqueira Leite</strong><br>
+                    <!-- Exibe o texto ou conteúdo dessa linha na página. -->
                     R. Washingthon Luiz, 2200
+                <!-- Insere ou abre um elemento visual da página. -->
                 </li>
+                <!-- Insere ou abre um elemento visual da página. -->
                 <li data-index="2">
+                    <!-- Insere ou abre um elemento visual da página. -->
                     <strong>PEV Jardim Zaíra</strong><br>
+                    <!-- Exibe o texto ou conteúdo dessa linha na página. -->
                     Av. Washington Luiz, s/n
+                <!-- Insere ou abre um elemento visual da página. -->
                 </li>
+            <!-- Insere ou abre um elemento visual da página. -->
             </ul>
+        <!-- Insere ou abre um elemento visual da página. -->
         </aside>
 
+        <!-- Cria um agrupamento genérico de elementos. -->
         <div id="mapa" role="region" aria-label="Mapa com ecopontos"></div>
+    <!-- Fecha a área principal de conteúdo da página. -->
     </main>
 
-    <script src="script.js"></script>
+    <!-- JavaScript: ativa os comportamentos desta página. -->
+<!-- Carrega o arquivo JavaScript responsável pelas interações. -->
+<script src="script.js"></script>
+<!-- Fecha o conteúdo visível da página. -->
 </body>
+<!-- Fecha o documento HTML. -->
 </html>
