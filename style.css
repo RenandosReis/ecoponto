@@ -1358,6 +1358,46 @@ header .menu-links a:hover {
 
 /* Abre um bloco de estilos para o elemento ou regra selecionada. */
 .acoes-dialogo {
+
+/* CONFIRMAÇÃO DE ENVIO */
+
+.sucesso-contato {
+    text-align: center;
+    padding-top: 12px;
+}
+
+.sucesso-contato[hidden],
+.acoes-dialogo[hidden] {
+    display: none;
+}
+
+.sucesso-contato .icone-confirmacao {
+    display: flex;
+    margin: 0 auto 18px;
+    width: 64px;
+    height: 64px;
+    font-size: 36px;
+}
+
+.sucesso-contato h3 {
+    margin: 0 0 12px;
+    color: #087443;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.sucesso-contato p {
+    margin: 0;
+    color: #404840;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.sucesso-contato .botao-confirmar {
+    width: 100%;
+    margin-top: 24px;
+}
+
     /* Define uma propriedade visual para os elementos selecionados. */
     display: flex;
     /* Define uma propriedade visual para os elementos selecionados. */
@@ -1592,7 +1632,9 @@ header .menu-links a[aria-current="page"] .menu-icone {
 header .menu-links a:hover, header .menu-links a[aria-current="page"] { color: #b9ddb8; }
 
 /* Define uma propriedade visual para os elementos selecionados. */
-.pagina-inicial header { position: absolute; top: 0; left: 0; width: 100%; background: rgba(20, 43, 25, 0.72); }
+.pagina-inicial header {
+    background: linear-gradient(90deg, rgba(19,48,27,.82), rgba(19,48,27,.58)), url('folhas.jpg') center/cover;
+}
 /* Define uma propriedade visual para os elementos selecionados. */
 .hero-card .botao { display: inline-block; margin-top: 8px; padding: 12px 22px; border-radius: 6px; font-weight: 800; text-decoration: none; }
 /* Abre um bloco de estilos para o elemento ou regra selecionada. */
@@ -1695,12 +1737,14 @@ header .menu-links a:hover, header .menu-links a[aria-current="page"] { color: #
 /* Define uma propriedade visual para os elementos selecionados. */
 .pagina-mapa, .pagina-denuncia, .pagina-contato, .pagina-blog, .pagina-faq { background: #fff; }
 /* Abre um bloco de estilos para o elemento ou regra selecionada. */
-.pagina-mapa header, .pagina-denuncia header, .pagina-contato header, .pagina-blog header, .pagina-faq header {
-    /* Define uma propriedade visual para os elementos selecionados. */
+.pagina-inicial header,
+.pagina-mapa header,
+.pagina-denuncia header,
+.pagina-contato header,
+.pagina-blog header,
+.pagina-faq header {
     background: linear-gradient(90deg, rgba(19,48,27,.82), rgba(19,48,27,.58)), url('folhas.jpg') center/cover;
-/* Fecha o bloco atual de estilos CSS. */
 }
-
 /* Define uma propriedade visual para os elementos selecionados. */
 .container-mapa { height: calc(100vh - 118px); padding: 28px 5vw 40px; background: #fff; }
 /* Define uma propriedade visual para os elementos selecionados. */
@@ -1883,7 +1927,6 @@ header .menu-links a:hover, header .menu-links a[aria-current="page"] { color: #
     /* Define uma propriedade visual para os elementos selecionados. */
     header .menu-links { width: 100%; flex-wrap: wrap; }
     /* Define uma propriedade visual para os elementos selecionados. */
-    .pagina-inicial header { position: relative; }
     /* Define uma propriedade visual para os elementos selecionados. */
     .hero-inicial { min-height: 480px; padding: 48px 24px; }
     /* Define uma propriedade visual para os elementos selecionados. */

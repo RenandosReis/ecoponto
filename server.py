@@ -10,7 +10,25 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 # Importa um recurso necessário ao servidor.
 from uuid import uuid4
+import os
+import smtplib
+from email.message import EmailMessage
+from dotenv import load_dotenv
+from supabase import create_client
+from urllib.parse import urlparse, parse_qs, unquote
 
+load_dotenv()
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+EMAIL_REMETENTE = os.getenv("EMAIL_REMETENTE")
+EMAIL_DESTINO = os.getenv("EMAIL_DESTINO")
+EMAIL_SENHA = os.getenv("EMAIL_SENHA")
+
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+print("Conexão com Supabase configurada com sucesso!")
 
 # Executa uma instrução de processamento do servidor.
 ROOT = Path(__file__).resolve().parent
@@ -24,13 +42,93 @@ data_lock = threading.Lock()
 
 # Define uma classe responsável por uma parte do servidor.
 class EcoMovimentoHandler(SimpleHTTPRequestHandler):
+
+    def do_GET(self):
+        url = urlparse(self.path)
+
+        if url.path == "/api/posts":
+            parametros = parse_qs(url.query)
+            
+            try:
+                pagina = max(1, int(parametros.get("pagina", ["1"])[0]))
+            except ValueError:
+                pagina = 1
+
+            por_pagina = 6
+            inicio = (pagina - 1) * por_pagina
+
+            try:
+                consulta = (
+                    supabase.table("posts")
+                    .select("*", count="exact")
+                    .eq("publicado", True)
+                )
+
+                categoria = parametros.get("categoria", [""])[0]
+                busca = parametros.get("busca", [""])[0]
+
+                if categoria:
+                    consulta = consulta.eq("categoria", categoria)
+
+                if busca:
+                    consulta = consulta.ilike("titulo", f"%{busca}%")
+
+                resultado = (
+                    consulta
+                    .order("criado_em", desc=True)
+                    .range(inicio, inicio + por_pagina - 1)
+                    .execute()
+                )
+
+                total = resultado.count or 0
+
+                self.send_json(200, {
+                    "posts": resultado.data,
+                    "pagina": pagina,
+                    "total": total,
+                    "total_paginas": (total + por_pagina - 1) // por_pagina
+                })
+
+            except Exception as erro:
+                print("Erro ao buscar postagens:", erro)
+                self.send_json(500, {"erro": "Não foi possível carregar as postagens."})
+
+            return
+
+        if url.path.startswith("/api/posts/"):
+            slug = unquote(url.path.split("/api/posts/", 1)[1])
+
+            try:
+                resultado = (
+                    supabase.table("posts")
+                    .select("*")
+                    .eq("slug", slug)
+                    .eq("publicado", True)
+                    .limit(1)
+                    .execute()
+                )
+
+                if not resultado.data:
+                    self.send_json(404, {"erro": "Postagem não encontrada."})
+                    return
+
+                self.send_json(200, resultado.data[0])
+
+            except Exception as erro:
+                print("Erro ao buscar postagem:", erro)
+                self.send_json(500, {"erro": "Não foi possível carregar a postagem."})
+
+            return
+
+        super().do_GET()
     # Define uma função reutilizável do servidor.
     def do_POST(self):
-        # Executa estas instruções apenas quando a condição é verdadeira.
+        if self.path == "/api/contatos":
+            self.do_POST_contatos()
+            return
+
         if self.path != "/api/denuncias":
-            # Executa uma instrução de processamento do servidor.
             self.send_json(404, {"erro": "Endpoint não encontrado."})
-            # Executa uma instrução de processamento do servidor.
             return
 
         # Tenta executar operações que podem gerar erros.
@@ -111,6 +209,90 @@ class EcoMovimentoHandler(SimpleHTTPRequestHandler):
 
         # Executa uma instrução de processamento do servidor.
         self.send_json(201, {"mensagem": "Denúncia registrada localmente.", "id": denuncia["id"]})
+
+    def do_POST_contatos(self):
+        try:
+            content_length = int(self.headers.get("Content-Length", "0"))
+        except ValueError:
+            self.send_json(400, {"erro": "Tamanho da solicitação inválido."})
+            return
+
+        if content_length <= 0 or content_length > MAX_REQUEST_SIZE:
+            self.send_json(413, {"erro": "A solicitação está vazia ou é muito grande."})
+            return
+
+        try:
+            payload = json.loads(self.rfile.read(content_length))
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            self.send_json(400, {"erro": "Envie os dados em formato JSON válido."})
+            return
+
+        if not isinstance(payload, dict):
+            self.send_json(400, {"erro": "Os dados enviados são inválidos."})
+            return
+
+        nome = self.clean_field(payload.get("nome"), 120)
+        email = self.clean_field(payload.get("email"), 254)
+        assunto = self.clean_field(payload.get("assunto"), 160)
+        mensagem = self.clean_field(payload.get("mensagem"), 3000)
+
+        if not email or "@" not in email or not assunto or not mensagem:
+            self.send_json(400, {"erro": "Preencha corretamente o e-mail, assunto e mensagem."})
+            return
+
+        registro = {
+            "email": email,
+            "emissao": mensagem,
+            "data_emissao": datetime.now().date().isoformat(),
+            "status": "pendente"
+        }
+        try:
+            print("Dados enviados ao Supabase:", registro)
+
+            supabase.table("formulario_suporte").insert(
+                registro, returning="minimal"
+            ).execute()
+
+            print("Mensagem registrada no Supabase.")
+
+        except Exception as erro:
+            print("Erro ao salvar contato no Supabase:", erro)
+            self.send_json(500, {"erro": "Não foi possível registrar sua mensagem. Tente novamente."})
+            return
+
+        notificacao_enviada = False
+
+        try:
+            if not all([EMAIL_REMETENTE, EMAIL_DESTINO, EMAIL_SENHA]):
+                raise ValueError("Configurações de e-mail incompletas.")
+
+            email_msg = EmailMessage()
+            email_msg["Subject"] = f"Novo contato EcoPonto: {assunto}"
+            email_msg["From"] = EMAIL_REMETENTE
+            email_msg["To"] = EMAIL_DESTINO
+            email_msg["Reply-To"] = email
+            email_msg.set_content(
+                f"Nova mensagem recebida pelo site EcoPonto.\n\n"
+                f"Nome: {nome or 'Não informado'}\n"
+                f"Email: {email}\n"
+                f"Assunto: {assunto}\n\n"
+                f"Mensagem:\n{mensagem}\n"
+            )
+
+            with smtplib.SMTP("smtp.gmail.com", 587) as servidor:
+                servidor.starttls()
+                servidor.login(EMAIL_REMETENTE, EMAIL_SENHA)
+                servidor.send_message(email_msg)
+
+            notificacao_enviada = True
+
+        except Exception as erro:
+            print("Erro ao enviar notificação por e-mail:", erro)
+
+        if notificacao_enviada:
+            self.send_json(201, {"mensagem": "Mensagem registrada e notificação enviada."})
+        else:
+            self.send_json(201, {"mensagem": "Mensagem registrada, mas a notificação por e-mail não foi enviada."})
 
     # Aplica configuração ou comportamento ao elemento seguinte.
     @staticmethod

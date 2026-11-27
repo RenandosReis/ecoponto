@@ -158,21 +158,41 @@
     <!-- Fecha o formulário. -->
     </form>
     <!-- Insere ou abre um elemento visual da página. -->
+  <div id="conteudo-revisao">
     <span class="icone-confirmacao" aria-hidden="true">✓</span>
-    <!-- Exibe um título de seção. -->
+
     <h2 id="titulo-confirmacao">Revisar sua mensagem</h2>
-    <!-- Exibe um parágrafo de texto explicativo. -->
+
     <p>Confira o assunto e o texto antes de continuar. Seu aplicativo de e-mail será aberto para você concluir o envio.</p>
-    <!-- Cria um agrupamento genérico de elementos. -->
+
     <div class="resumo-contato" id="resumo-contato"></div>
-    <!-- Cria um agrupamento genérico de elementos. -->
+
+    <p id="erro-contato" class="status-contato" role="alert" aria-live="assertive"></p>
+
     <div class="acoes-dialogo">
-        <!-- Cria um botão ou acionador de ação. -->
-        <button type="button" class="botao-revisar" id="voltar-contato">Voltar e revisar</button>
-        <!-- Cria um link para outra página ou endereço externo. -->
-        <a class="botao-confirmar" id="confirmar-contato">Abrir e-mail</a>
-    <!-- Fecha o agrupamento de elementos. -->
+        <button type="button" class="botao-revisar" id="voltar-contato">
+            Voltar e revisar
+        </button>
+
+        <button type="button" class="botao-confirmar" id="confirmar-contato">
+            Enviar mensagem
+        </button>
     </div>
+</div>
+    <div id="sucesso-contato" class="sucesso-contato" hidden>
+    <span class="icone-confirmacao" aria-hidden="true">✓</span>
+
+    <h3>Mensagem enviada com sucesso!</h3>
+
+    <p>
+        Nossa equipe recebeu sua mensagem e entrará em contato
+        pelo e-mail enviado no formulário.
+    </p>
+
+    <button type="button" class="botao-confirmar" id="fechar-sucesso">
+        Concluir
+    </button>
+</div>
 <!-- Insere ou abre um elemento visual da página. -->
 </dialog>
 
